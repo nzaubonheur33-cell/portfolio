@@ -1,82 +1,151 @@
-# Bonheur Nzau - Portfolio Personnel
+# 📁 Bonheur Nzau — Developer Portfolio
 
-Portfolio professionnel de Bonheur Nzau, étudiant en informatique et développeur full-stack.
+> Portfolio Full-Stack professionnel — React, Node.js, TypeScript, Prisma, MySQL
 
-## Structure du Projet
+---
+
+## 🏗️ Architecture du projet
 
 ```
-stitch_bonheur_nzau_developer_portfolio/
-├── index.html          # Page principale
-├── css/
-│   ├── input.css       # Fichier CSS source avec directives Tailwind
-│   └── output.css      # Fichier CSS compilé (généré automatiquement)
-├── js/
-│   └── main.js         # Scripts JavaScript (langage, filtres, modales)
-├── assets/             # Dossier pour les images et ressources
-├── tailwind.config.js  # Configuration Tailwind CSS personnalisée
-└── package.json        # Dépendances et scripts npm
+portfolio/
+├── client/                   # Frontend React (Vite + TailwindCSS)
+│   ├── public/               # Fichiers statiques (logo, cv.pdf)
+│   ├── src/
+│   │   ├── components/       # Composants UI réutilisables
+│   │   │   ├── motion/       # Animations Framer Motion
+│   │   │   └── ui/           # Composants de chargement (Spinner, Skeleton)
+│   │   ├── hooks/            # Custom React hooks
+│   │   ├── locales/          # Fichiers de traduction (fr.json, en.json)
+│   │   ├── pages/
+│   │   │   └── admin/        # Dashboard & Login Admin (protégé)
+│   │   ├── services/         # Appels API (axios)
+│   │   └── main.jsx          # Point d'entrée React
+│   ├── index.html            # Template HTML + SEO meta tags
+│   ├── vite.config.js        # Configuration Vite
+│   ├── tailwind.config.js    # Configuration TailwindCSS
+│   └── package.json
+│
+├── server/                   # Backend Node.js (Express + TypeScript)
+│   ├── src/
+│   │   ├── config/           # Configuration Prisma
+│   │   ├── controllers/      # Logique métier (auth, contact, projects)
+│   │   ├── middlewares/      # Auth JWT, gestion des erreurs
+│   │   ├── routes/           # Définition des routes API
+│   │   └── index.ts          # Point d'entrée Express
+│   ├── tsconfig.json
+│   └── package.json
+│
+├── prisma/                   # ORM Prisma
+│   ├── schema.prisma         # Schéma de la base de données
+│   ├── seed.ts               # Création du compte Admin initial
+│   └── migrations/           # Migrations SQL générées
+│
+├── .env.example              # Variables d'environnement (template)
+├── .gitignore
+├── package.json              # Scripts monorepo (dev, build)
+└── README.md
 ```
 
-## Installation et Développement
+---
 
-### Installation des dépendances
+## 🚀 Démarrage rapide
+
+### Prérequis
+- Node.js 18+
+- MySQL 8+
+
+### Installation
+
 ```bash
-npm install
+# Cloner le projet
+git clone https://github.com/bonheur84/portfolio.git
+cd portfolio
+
+# Installer toutes les dépendances (client + server)
+npm run install:all
 ```
 
-### Mode développement (avec surveillance)
+### Configuration
+
 ```bash
+# Copier le fichier d'environnement
+cp .env.example .env
+
+# Renseigner les variables dans .env
+DATABASE_URL="mysql://root:motdepasse@localhost:3306/portfolio"
+JWT_SECRET="votre_secret_jwt"
+RESEND_API_KEY="votre_cle_resend"  # optionnel
+```
+
+### Base de données
+
+```bash
+# Appliquer les migrations
+npx prisma migrate dev
+
+# Générer le client Prisma
+npx prisma generate
+
+# Créer le compte admin
+node -e "
+const {PrismaClient}=require('@prisma/client');
+const bcrypt=require('bcrypt');
+const p=new PrismaClient();
+bcrypt.hash('B@nheur2026!',12).then(h=>p.adminUser.upsert({where:{email:'nzaubonheur84@gmail.com'},update:{passwordHash:h},create:{name:'Bonheur Nzau',email:'nzaubonheur84@gmail.com',passwordHash:h,role:'ADMIN'}})).then(()=>p.\$disconnect());
+"
+```
+
+### Lancement en développement
+
+```bash
+# Démarre client (port 5173) + server (port 5000) en parallèle
 npm run dev
 ```
-Cette commande compile le CSS en mode surveillance et régénère automatiquement les changements.
 
-### Build de production
+---
+
+## 🌐 URLs
+
+| Service | URL |
+|---|---|
+| Portfolio | http://localhost:5173 |
+| Admin | http://localhost:5173/admin |
+| API | http://localhost:5000/api |
+
+---
+
+## 🔑 Compte Admin
+
+| Champ | Valeur |
+|---|---|
+| Email | nzaubonheur84@gmail.com |
+| Mot de passe | *(défini lors du seed)* |
+
+---
+
+## 🛠️ Stack technique
+
+| Couche | Technologies |
+|---|---|
+| **Frontend** | React 18, Vite, TailwindCSS, Framer Motion, i18next, React Hook Form |
+| **Backend** | Node.js, Express, TypeScript, JWT, Bcrypt, Zod, Resend |
+| **Base de données** | MySQL 8 + Prisma ORM v5 |
+| **Tooling** | ESLint, Nodemon, Concurrently |
+
+---
+
+## 📦 Scripts disponibles
+
 ```bash
-npm run build
+npm run dev           # Démarre client + server en parallèle
+npm run dev:client    # Démarre seulement le client
+npm run dev:server    # Démarre seulement le server
+npm run build         # Build production (client + server)
+npm run install:all   # Installe toutes les dépendances
 ```
-Cette commande minifie le CSS pour la production.
 
-## Fonctionnalités
+---
 
-- **Site bilingue** (Français/Anglais) avec changement de langue dynamique
-- **Filtrage des compétences** par catégorie (Frontend, Backend, Databases, DevOps, AI)
-- **Formulaires interactifs** avec validation et modales
-- **Design responsive** pour tous les appareils
-- **Système de modales** pour les études de cas et les préviews administratives
+## 📄 Licence
 
-## Technologies Utilisées
-
-- **HTML5** - Structure sémantique
-- **Tailwind CSS** - Framework CSS utility-first
-- **JavaScript (Vanilla)** - Interactivité et manipulation DOM
-- **Google Fonts** - Typographie (Plus Jakarta Sans, JetBrains Mono)
-- **Material Symbols** - Icônes Google
-
-## Personnalisation
-
-### Configuration Tailwind
-Le fichier `tailwind.config.js` contient la configuration personnalisée avec :
-- Palette de couleurs personnalisée
-- Typographie personnalisée
-- Espacements et bordures personnalisés
-
-### Contenu
-Le contenu peut être modifié directement dans le fichier `index.html` :
-- Sections de la page (Hero, About, Skills, Services, Projects, etc.)
-- Textes et informations personnelles
-- Liens vers les projets GitHub
-
-## Déploiement
-
-Pour déployer ce portfolio :
-1. Exécuter `npm run build` pour générer le CSS de production
-2. Uploader le contenu du dossier sur un serveur web statique
-3. Le site est prêt à être utilisé
-
-## Auteur
-
-**Bonheur Nzau**
-- Étudiant en Informatique @ Université Nouveaux Horizons
-- Spécialisation: Intelligence Artificielle
-- Email: nzaubonheur84@gmail.com
-- GitHub: https://github.com/bonheur84
+Projet personnel — © 2026 Bonheur Nzau. Tous droits réservés.

@@ -57,7 +57,7 @@ function Hero() {
             </a>
             <a
               className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-surface-container-lowest text-on-surface font-headline-sm text-body-md shadow-sm hover:bg-surface-container transition-all"
-              href="cv.pdf"
+              href="/cv.pdf"
               download
             >
               <span className="material-symbols-outlined text-[18px] text-primary">download</span>

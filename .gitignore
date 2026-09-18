@@ -1,47 +1,55 @@
-# Dependencies
+# ===========================================
+# .gitignore — Bonheur Nzau Portfolio
+# ===========================================
+
+# --- Dépendances ---
 node_modules/
 package-lock.json
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
 
-# Environment Variables
+# --- Variables d'environnement (NE JAMAIS committer) ---
 .env
 .env.local
-.env.development.local
-.env.test.local
-.env.production.local
+.env.*.local
 
-# Build output
+# --- Build output ---
 dist/
 client/dist/
 server/dist/
-css/output.css
 build/
 
-# Prisma
-# (Optional) If you don't want to commit your local sqlite DB
+# --- Prisma / Base de données ---
 *.db
 *.sqlite
 *.sqlite3
 
-# OS files
+# --- Logs ---
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# --- OS ---
 .DS_Store
 Thumbs.db
+desktop.ini
 
-# IDE files
+# --- Éditeurs & IDE ---
 .vscode/
 .idea/
 *.swp
 *.swo
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
 
-# Temporary files
-*.tmp
-*.log
-
-# AI & Editor specific folders
+# --- Dossiers IA (Antigravity, Claude, Cursor, Devin) ---
 .agents/
 .claude/
 .cursor/
 .devin/
 .vite/
+
+# --- Fichiers temporaires ---
+*.tmp
+*.bak
