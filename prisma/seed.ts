@@ -4,11 +4,11 @@ import bcrypt from 'bcrypt';
 const prisma = new PrismaClient();
 
 async function main() {
-  const passwordHash = await bcrypt.hash('Admin@2026!', 12);
+  const passwordHash = await bcrypt.hash('B@nheur2026!', 12);
 
   const admin = await prisma.adminUser.upsert({
     where: { email: 'nzaubonheur84@gmail.com' },
-    update: {},
+    update: { passwordHash },  // Force la mise à jour du mot de passe
     create: {
       name: 'Bonheur Nzau',
       email: 'nzaubonheur84@gmail.com',
@@ -17,7 +17,7 @@ async function main() {
     },
   });
 
-  console.log(`✅ Admin créé : ${admin.email}`);
+  console.log(`✅ Admin mis à jour : ${admin.email}`);
 }
 
 main()

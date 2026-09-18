@@ -12,6 +12,7 @@ export function AnimatedSection({
   direction = 'up', // 'up' | 'down' | 'left' | 'right' | 'none'
   duration = 0.6,
   once = true,
+  id = undefined,
 }) {
   const directions = {
     up:    { y: 40,  x: 0   },
@@ -25,7 +26,8 @@ export function AnimatedSection({
   const animate = { opacity: 1, y: 0, x: 0 };
 
   return (
-    <motion.div
+    <motion.section
+      id={id}
       className={className}
       initial={initial}
       whileInView={animate}
@@ -33,7 +35,7 @@ export function AnimatedSection({
       transition={{ duration, delay, ease: [0.25, 0.46, 0.45, 0.94] }}
     >
       {children}
-    </motion.div>
+    </motion.section>
   );
 }
 
