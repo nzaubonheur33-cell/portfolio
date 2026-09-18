@@ -1,0 +1,2090 @@
+<!doctype html>
+<html class="scroll-smooth" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Bonheur Nzau | Full-Stack Developer &amp; CS Student</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;1,400&amp;family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/output.css" />
+</head>
+
+<body
+  class="bg-background font-body-md text-body-md text-on-surface antialiased selection:bg-primary-fixed selection:text-on-primary-fixed">
+  <header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+    <div class="h-20 max-w-[1120px] mx-auto px-6 lg:px-8 flex items-center justify-between gap-4">
+      <div class="flex items-center gap-4 shrink-0">
+        <a class="group flex items-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-lg"
+          data-path="home" href="#hero"><img
+            src="assets/logo.png" alt="Logo" class="h-12 w-12 object-contain group-hover:opacity-80 transition-opacity"></a>
+      </div>
+      <nav
+        class="hidden lg:flex items-center gap-1 p-1 bg-surface-container-lowest rounded-full shadow-[0_1px_4px_rgba(0,0,0,0.02)]"
+        data-active-classes="bg-surface-container text-primary font-semibold">
+        <a aria-current="page"
+          class="px-3.5 py-1.5 rounded-full transition-colors bg-surface-container text-primary font-semibold"
+          data-path="home" href="#hero">Home</a><a
+          class="px-3.5 py-1.5 rounded-full text-on-surface-variant hover:text-on-surface transition-colors"
+          data-path="about" href="#about">About</a><a
+          class="px-3.5 py-1.5 rounded-full text-on-surface-variant hover:text-on-surface transition-colors"
+          data-path="skills" href="#skills">Skills</a><a
+          class="px-3.5 py-1.5 rounded-full text-on-surface-variant hover:text-on-surface transition-colors"
+          data-path="services" href="#services">Services</a><a
+          class="px-3.5 py-1.5 rounded-full text-on-surface-variant hover:text-on-surface transition-colors"
+          data-path="projects" href="#projects">Projects</a><a
+          class="px-3.5 py-1.5 rounded-full text-on-surface-variant hover:text-on-surface transition-colors"
+          data-path="experience" href="#experience">Experience</a><a
+          class="px-3.5 py-1.5 rounded-full text-on-surface-variant hover:text-on-surface transition-colors"
+          data-path="education" href="#education">Education</a><a
+          class="px-3.5 py-1.5 rounded-full text-on-surface-variant hover:text-on-surface transition-colors"
+          data-path="contact" href="#contact">Contact</a>
+      </nav>
+      <div class="flex items-center gap-2.5 shrink-0">
+        <div class="flex items-center bg-surface-container-low p-1 rounded-full text-label-badge font-label-badge">
+          <button
+            class="px-2 py-0.5 rounded-full bg-surface-container-lowest text-on-surface shadow-[0_1px_2px_rgba(0,0,0,0.04)] font-semibold transition-all"
+            type="button">
+            EN</button><button
+            class="px-2 py-0.5 rounded-full text-on-surface-variant hover:text-on-surface transition-all" type="button">
+            FR
+          </button>
+        </div>
+        <button aria-label="Toggle theme"
+          class="w-8 h-8 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors"
+          type="button">
+          <span class="material-symbols-outlined text-[18px]">light_mode</span></button><a
+          class="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 bg-primary-container text-on-primary rounded-full font-label-badge text-label-badge hover:bg-primary transition-all shadow-[0_2px_10px_-2px_rgba(249,115,22,0.3)]"
+          data-path="contact" href="#contact"><span>Let's Talk</span><span
+            class="material-symbols-outlined text-[15px]">arrow_forward</span></a>
+        <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
+          <span class="material-symbols-outlined text-on-primary text-[18px]">person</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="w-full pt-8 bg-background min-h-[calc(100vh-280px)]">
+    <div class="max-w-[1120px] mx-auto px-6 lg:px-8 py-10">
+      <div class="flex flex-col w-full text-on-surface">
+        <section class="relative py-12 lg:py-20" id="hero">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+            <!-- Left Column: Copy & CTAs -->
+            <div class="lg:col-span-7 flex flex-col items-start space-y-6">
+              <!-- Live Status & Greeting -->
+              <div class="flex flex-wrap items-center gap-3">
+                <span
+                  class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container text-primary text-label-badge font-label-badge shadow-sm">
+                  <span data-lang-en="Open to opportunities & collabs"
+                    data-lang-fr="Disponible pour nouvelles opportunités">Open to opportunities & collabs</span>
+                </span>
+              </div>
+              <!-- Headline -->
+              <div class="space-y-2">
+                <div class="inline-flex items-center gap-2">
+                  <span class="text-headline-md font-headline-md text-on-surface-variant" data-lang-en="Hi, I'm"
+                    data-lang-fr="Bonjour, je suis">Hi, I'm</span>
+                  <span class="h-1 w-8 rounded-full bg-primary-container"></span>
+                </div>
+                <h1 class="font-display-hero text-display-hero tracking-tight text-on-surface">
+                  Bonheur
+                  <span class="text-primary-container inline-block">Nzau</span>
+                </h1>
+                <p class="font-label-code text-label-code text-primary font-medium tracking-wide uppercase">
+                  NZAU WUMA BONHEUR •
+                  <span data-lang-en="Specialization in AI @ Université Nouveaux Horizons"
+                    data-lang-fr="Spécialisation IA @ Université Nouveaux Horizons">Specialization in AI @ Université
+                    Nouveaux Horizons</span>
+                </p>
+              </div>
+              <!-- Subtitle & Value statement -->
+              <p class="font-headline-sm text-headline-sm text-on-surface font-semibold max-w-xl"
+                data-lang-en="Computer Science Student & Full-Stack Developer"
+                data-lang-fr="Étudiant en Informatique & Développeur Full-Stack">
+                Computer Science Student & Full-Stack Developer
+              </p>
+              <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl leading-relaxed"
+                data-lang-en="I transform real-world problems into clean, functional, and modern software solutions. Driven by a deep passion for Artificial Intelligence, backend architecture, robust network protocols, and the Unix/Linux ecosystem."
+                data-lang-fr="Je transforme des problèmes concrets en solutions logicielles épurées, fiables et modernes. Passionné par l'Intelligence Artificielle, l'architecture backend, les protocoles réseau et l'écosystème Unix/Linux.">
+                I transform real-world problems into clean, functional, and
+                modern software solutions. Driven by a deep passion for
+                Artificial Intelligence, backend architecture, robust network
+                protocols, and the Unix/Linux ecosystem.
+              </p>
+              <!-- CTA Action Buttons -->
+              <div class="flex flex-wrap items-center gap-4 pt-2">
+                <a class="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-primary-container text-on-primary font-headline-sm text-body-md shadow-md hover:bg-primary transition-all group"
+                  href="#projects">
+                  <span data-lang-en="View Selected Work" data-lang-fr="Voir mes Projets">View Selected Work</span>
+                  <span
+                    class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                </a>
+                <a class="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-surface-container-lowest text-on-surface font-headline-sm text-body-md shadow-sm hover:bg-surface-container transition-all"
+                  href="cv.pdf" download>
+                  <span class="material-symbols-outlined text-[18px] text-primary">download</span>
+                  <span data-lang-en="Download Resume" data-lang-fr="Télécharger le CV">Download Resume</span>
+                </a>
+                <a class="inline-flex items-center gap-1 px-4 py-3.5 text-on-surface-variant hover:text-primary font-headline-sm text-body-md transition-colors"
+                  href="#contact">
+                  <span data-lang-en="Let's Talk" data-lang-fr="Discutons">Let's Talk</span>
+                  <span class="material-symbols-outlined text-[16px]">north_east</span>
+                </a>
+              </div>
+              <!-- Terminal-like mini indicator -->
+              <div
+                class="pt-2 flex items-center gap-3 font-label-code text-label-code text-on-surface-variant bg-surface-container-low px-4 py-2 rounded-xl">
+                <span class="text-primary font-semibold">$</span>
+                <span>stack:</span>
+                <span class="text-on-surface font-medium">React • Javascript • Python • Linux • Node.js • Github • Sql</span>
+              </div>
+            </div>
+            <!-- Right Column: Editorial Line-Art Illustration -->
+            <div class="lg:col-span-5 flex justify-center relative">
+              <div
+                class="w-full max-w-[440px] bg-surface-container-lowest rounded-3xl p-6 shadow-md relative overflow-hidden">
+                <!-- Subtle warm backdrop circle -->
+                <div
+                  class="absolute -top-12 -right-12 w-56 h-56 rounded-full bg-primary-fixed/40 blur-2xl pointer-events-none">
+                </div>
+                <!-- Editorial Custom SVG Illustration inspired by reference -->
+                <svg class="w-full h-auto drop-shadow-sm" fill="none" viewBox="0 0 400 380"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <!-- Lamp overhead -->
+                  <path d="M 200 0 L 200 45" stroke="#1B1C1A" stroke-linecap="round" stroke-width="2.5"></path>
+                  <path d="M 180 45 L 220 45 L 235 70 L 165 70 Z" fill="#FBF9F5" stroke="#1B1C1A"
+                    stroke-linejoin="round" stroke-width="2.5"></path>
+                  <!-- Warm light beam cone -->
+                  <polygon class="text-primary-container" fill="currentColor" opacity="0.08"
+                    points="175,70 225,70 320,330 80,330"></polygon>
+                  <circle cx="200" cy="74" fill="#F97316" r="5"></circle>
+                  <!-- Wall floating shelf with books and plant -->
+                  <line stroke="#1B1C1A" stroke-linecap="round" stroke-width="3" x1="280" x2="380" y1="90" y2="90">
+                  </line>
+                  <!-- Plant pot -->
+                  <path d="M 345 90 L 348 72 L 366 72 L 369 90 Z" fill="#E4E2DE" stroke="#1B1C1A" stroke-width="2">
+                  </path>
+                  <path d="M 357 72 C 352 58 340 55 344 45 C 352 50 357 58 357 72 Z" fill="#F97316"></path>
+                  <path d="M 357 72 C 362 56 374 54 370 42 C 362 48 357 58 357 72 Z" fill="#9D4300"></path>
+                  <!-- Books on shelf -->
+                  <rect fill="#F97316" height="35" rx="1.5" stroke="#1B1C1A" stroke-width="2" width="10" x="295" y="55">
+                  </rect>
+                  <rect fill="#E4E2DE" height="42" rx="1.5" stroke="#1B1C1A" stroke-width="2" width="12" x="309" y="48">
+                  </rect>
+                  <rect fill="#DAE2FD" height="28" rx="1.5" stroke="#1B1C1A" stroke-width="2" width="9" x="325" y="62">
+                  </rect>
+                  <!-- Cozy Beanbag Chair (warm terracotta orange accent) -->
+                  <path
+                    d="M 190 320 C 140 320 120 280 140 230 C 150 205 180 180 220 170 C 270 160 330 190 340 250 C 348 295 300 320 250 320 Z"
+                    fill="#F97316" stroke="#1B1C1A" stroke-linejoin="round" stroke-width="3"></path>
+                  <path d="M 220 170 C 235 210 250 240 280 260" opacity="0.6" stroke="#9D4300" stroke-linecap="round"
+                    stroke-width="2"></path>
+                  <path d="M 165 245 C 190 265 220 275 260 278" opacity="0.6" stroke="#9D4300" stroke-linecap="round"
+                    stroke-width="2"></path>
+                  <!-- Developer Character sitting -->
+                  <!-- Head & Hair -->
+                  <ellipse cx="235" cy="140" fill="#FBF9F5" rx="19" ry="22" stroke="#1B1C1A" stroke-width="2.5">
+                  </ellipse>
+                  <!-- Curly dark hair -->
+                  <path
+                    d="M 218 135 C 215 120 230 110 245 115 C 255 118 260 128 252 138 C 248 130 240 125 228 128 C 220 130 219 135 218 135 Z"
+                    fill="#1B1C1A"></path>
+                  <!-- Eyeglasses -->
+                  <circle cx="230" cy="138" fill="none" r="5.5" stroke="#1B1C1A" stroke-width="2"></circle>
+                  <circle cx="243" cy="138" fill="none" r="5.5" stroke="#1B1C1A" stroke-width="2"></circle>
+                  <line stroke="#1B1C1A" stroke-width="2" x1="235.5" x2="237.5" y1="138" y2="138"></line>
+                  <path d="M 233 148 Q 237 152 242 148" fill="none" stroke="#1B1C1A" stroke-linecap="round"
+                    stroke-width="2"></path>
+                  <!-- Torso / Clean White T-shirt with line detail -->
+                  <path d="M 220 162 C 205 175 198 200 200 225 L 255 225 C 260 200 255 175 248 162 Z" fill="#FFFFFF"
+                    stroke="#1B1C1A" stroke-linejoin="round" stroke-width="2.5"></path>
+                  <path d="M 225 162 Q 234 168 243 162" stroke="#1B1C1A" stroke-width="2"></path>
+                  <!-- Arms & Laptop -->
+                  <path d="M 205 185 L 180 205 L 195 215" fill="none" stroke="#1B1C1A" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2.5"></path>
+                  <path d="M 245 185 L 215 208" fill="none" stroke="#1B1C1A" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2.5"></path>
+                  <!-- Laptop (Open with orange Bonheur logo/dot) -->
+                  <path d="M 160 205 L 205 205 L 198 220 L 152 220 Z" fill="#E4E2DE" stroke="#1B1C1A" stroke-width="2">
+                  </path>
+                  <path d="M 160 205 L 165 175 L 208 175 L 205 205 Z" fill="#FFFFFF" stroke="#1B1C1A" stroke-width="2">
+                  </path>
+                  <circle cx="186" cy="190" fill="#F97316" r="3"></circle>
+                  <!-- Legs crossed on beanbag -->
+                  <path d="M 205 225 C 190 240 180 270 170 275 L 140 275" fill="none" stroke="#1B1C1A"
+                    stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                  <path d="M 225 225 C 220 250 200 278 185 285 L 165 285" fill="none" stroke="#1B1C1A"
+                    stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                  <!-- Sneakers (Orange accents) -->
+                  <path d="M 140 270 L 132 282 C 128 285 132 290 142 290 L 152 290 L 150 278 Z" fill="#F97316"
+                    stroke="#1B1C1A" stroke-width="2"></path>
+                  <path d="M 165 280 L 158 292 C 154 295 158 300 168 300 L 178 300 L 175 288 Z" fill="#F97316"
+                    stroke="#1B1C1A" stroke-width="2"></path>
+                  <!-- Floating Code Sparks -->
+                  <g fill="#9D4300" font-family="JetBrains Mono, monospace" font-size="11" font-weight="600">
+                    <text x="75" y="150">&lt;div/&gt;</text>
+                    <text x="60" y="210">{ AI: true }</text>
+                    <text x="290" y="145">const code = fn();</text>
+                    <text x="50" y="280">git commit</text>
+                  </g>
+                  <circle cx="100" cy="110" fill="#F97316" r="3"></circle>
+                  <circle cx="340" cy="120" fill="#F97316" r="2.5"></circle>
+                  <circle cx="320" cy="305" fill="#F97316" r="3"></circle>
+                  <!-- Floor grounding line -->
+                  <line stroke="#1B1C1A" stroke-linecap="round" stroke-width="2.5" x1="50" x2="360" y1="330" y2="330">
+                  </line>
+                </svg>
+                <!-- Floating badge at corner -->
+                <div
+                  class="absolute bottom-4 left-6 right-6 bg-surface-container-low/95 backdrop-blur-md rounded-2xl p-3 flex items-center justify-between shadow-sm">
+                  <div class="flex items-center gap-3">
+                    <span
+                      class="w-8 h-8 rounded-lg bg-primary-fixed flex items-center justify-center text-on-primary-fixed">
+                      <span class="material-symbols-outlined text-[18px]">terminal</span>
+                    </span>
+                    <div>
+                      <p class="font-label-badge text-label-badge text-on-surface font-semibold">
+                        Nzau Wuma Bonheur
+                      </p>
+                      <p class="font-label-code text-label-code text-on-surface-variant">
+                        Computer Science Student
+                      </p>
+                    </div>
+                  </div>
+                  <span class="w-2.5 h-2.5 rounded-full bg-primary-container"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- ==================== 2. QUICK STATS BAR ==================== -->
+        <section class="py-8">
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="bg-surface-container-lowest p-5 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+              <p class="font-label-code text-label-code text-primary font-semibold mb-1">
+                01 • ACADEMIC
+              </p>
+              <p class="font-headline-sm text-headline-sm text-on-surface font-bold">
+                CS & AI Student
+              </p>
+              <p class="font-body-md text-body-md text-on-surface-variant mt-1">
+                Université Nouveaux Horizons
+              </p>
+            </div>
+            <div class="bg-surface-container-lowest p-5 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+              <p class="font-label-code text-label-code text-primary font-semibold mb-1">
+                02 • CODEBASE
+              </p>
+              <p class="font-headline-sm text-headline-sm text-on-surface font-bold">
+                3+ Core Projects
+              </p>
+              <p class="font-body-md text-body-md text-on-surface-variant mt-1">
+                CampusGuide, Mikanda, Portfolio
+              </p>
+            </div>
+            <div class="bg-surface-container-lowest p-5 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+              <p class="font-label-code text-label-code text-primary font-semibold mb-1">
+                03 • SPECIALTY
+              </p>
+              <p class="font-headline-sm text-headline-sm text-on-surface font-bold">
+                Full-Stack + Systems
+              </p>
+              <p class="font-body-md text-body-md text-on-surface-variant mt-1">
+                React, Node, Python & Linux
+              </p>
+            </div>
+            <div class="bg-surface-container-lowest p-5 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+              <p class="font-label-code text-label-code text-primary font-semibold mb-1">
+                04 • RESIDENCE
+              </p>
+              <p class="font-headline-sm text-headline-sm text-on-surface font-bold">
+                Lubumbashi, DRC
+              </p>
+              <p class="font-body-md text-body-md text-on-surface-variant mt-1">
+                Global Remote Ready
+              </p>
+            </div>
+          </div>
+        </section>
+        <!-- ==================== 3. ABOUT ME SECTION ==================== -->
+        <section class="py-16" id="about">
+          <div class="flex flex-col space-y-12">
+            <!-- Section Header -->
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+              <div>
+                <div class="inline-flex items-center gap-2 mb-1">
+                  <span class="font-label-code text-label-code text-primary uppercase tracking-wider"
+                    data-lang-en="Identity & Philosophy" data-lang-fr="Identité & Philosophie">Identity & Philosophy</span>
+                </div>
+                <h2 class="font-headline-lg text-headline-lg text-on-surface font-bold" data-lang-en="About Me"
+                  data-lang-fr="À Propos De Moi">
+                  About Me
+                </h2>
+                <p class="font-body-lg text-body-lg text-on-surface-variant mt-1"
+                  data-lang-en="Curious mind. Builder mindset. Continuous learner."
+                  data-lang-fr="Esprit curieux. Mentalité de bâtisseur. Apprenant perpétuel.">
+                  Curious mind. Builder mindset. Continuous learner.
+                </p>
+              </div>
+              <!-- Language Bio Switcher -->
+              <div
+                class="inline-flex bg-surface-container-low p-1 rounded-xl font-label-badge text-label-badge self-start md:self-auto">
+                <button
+                  class="px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface font-semibold shadow-sm transition-all"
+                  id="bio-btn-en" onclick="setBioLang('en')" type="button">
+                  English Bio
+                </button>
+                <button class="px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface transition-all"
+                  id="bio-btn-fr" onclick="setBioLang('fr')" type="button">
+                  Bio en Français
+                </button>
+              </div>
+            </div>
+            <!-- Narrative Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+              <!-- Left Illustration: Looking out the arch window -->
+              <div class="lg:col-span-4 flex justify-center">
+                <div
+                  class="w-full max-w-[340px] bg-surface-container-lowest rounded-3xl p-6 shadow-sm flex flex-col items-center text-center">
+                  <svg class="w-full h-auto" fill="none" viewBox="0 0 280 260" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Architectural Arch Window -->
+                    <path d="M 60 220 L 60 110 C 60 60 220 60 220 110 L 220 220 Z" fill="#F5F3EF" stroke="#1B1C1A"
+                      stroke-width="2.5"></path>
+                    <line stroke="#1B1C1A" stroke-width="2" x1="140" x2="140" y1="65" y2="220"></line>
+                    <line stroke="#1B1C1A" stroke-width="2" x1="60" x2="220" y1="130" y2="130"></line>
+                    <!-- Clouds outside -->
+                    <path d="M 85 95 C 90 90 100 90 105 95 C 112 95 116 102 110 108 L 82 108 Z" fill="#FFFFFF"></path>
+                    <!-- Developer leaning with coffee -->
+                    <circle cx="140" cy="165" fill="#FBF9F5" r="22" stroke="#1B1C1A" stroke-width="2.5"></circle>
+                    <!-- Hair -->
+                    <path d="M 120 160 C 122 145 135 140 150 142 C 160 144 163 155 158 165 C 150 158 140 155 128 158 Z"
+                      fill="#1B1C1A"></path>
+                    <!-- Shoulders -->
+                    <path d="M 105 220 C 110 195 125 188 140 188 C 155 188 170 195 175 220 Z" fill="#FFFFFF"
+                      stroke="#1B1C1A" stroke-width="2.5"></path>
+                    <!-- Coffee cup in hand with warm orange steam -->
+                    <rect fill="#F97316" height="22" rx="3" stroke="#1B1C1A" stroke-width="2" width="18" x="170"
+                      y="195"></rect>
+                    <path d="M 188 200 C 194 200 194 212 188 212" fill="none" stroke="#1B1C1A" stroke-width="2"></path>
+                    <path d="M 175 190 Q 177 184 175 178" fill="none" stroke="#9D4300" stroke-linecap="round"
+                      stroke-width="1.5"></path>
+                    <path d="M 182 190 Q 184 184 182 178" fill="none" stroke="#9D4300" stroke-linecap="round"
+                      stroke-width="1.5"></path>
+                  </svg>
+                  <p class="font-headline-sm text-headline-sm text-on-surface font-semibold mt-4">
+                    Bonheur Nzau
+                  </p>
+                  <p class="font-label-code text-label-code text-primary font-medium">
+                    Developer • Thinker • Creator
+                  </p>
+                </div>
+              </div>
+              <!-- Right: Dynamic Bio Text -->
+              <div class="lg:col-span-8 flex flex-col space-y-4">
+                <div class="space-y-4 font-body-lg text-body-lg text-on-surface-variant leading-relaxed"
+                  id="bio-content-en">
+                  <p>
+                    I am a Computer Science student at
+                    <strong class="text-on-surface font-semibold">Université Nouveaux Horizons</strong>
+                    in Lubumbashi, specializing in
+                    <strong class="text-on-surface font-semibold">Artificial Intelligence</strong>. My work bridges
+                    intuitive frontends with
+                    high-performance backends and resilient system
+                    architecture.
+                  </p>
+                  <p>
+                    My philosophy centers around building practical,
+                    accessible digital tools that empower communities. From
+                    architecting
+                    <span class="text-primary font-medium">CampusGuide</span>
+                    to streamline higher education interactions, to creating
+                    <span class="text-primary font-medium">Mikanda</span> to
+                    preserve and promote Congolese literature, I focus on
+                    software that creates tangible, real-world utility.
+                  </p>
+                  <p>
+                    Beyond application logic, I am intensely interested in
+                    Linux server internals, containerization, computer
+                    networking protocols (Cisco CCNA track), and the
+                    integration of large language models for smart, automated
+                    workflows.
+                  </p>
+                </div>
+                <div class="space-y-4 font-body-lg text-body-lg text-on-surface-variant leading-relaxed hidden"
+                  id="bio-content-fr">
+                  <p>
+                    Je suis étudiant en Sciences Informatiques à l'<strong
+                      class="text-on-surface font-semibold">Université Nouveaux Horizons</strong>
+                    à Lubumbashi, avec une spécialisation en
+                    <strong class="text-on-surface font-semibold">Intelligence Artificielle</strong>. Mon travail unit
+                    des interfaces modernes à des
+                    architectures backend résilientes et sécurisées.
+                  </p>
+                  <p>
+                    Ma philosophie repose sur la création d'outils numériques
+                    concrets et accessibles qui profitent directement à nos
+                    communautés. De la conception de
+                    <span class="text-primary font-medium">CampusGuide</span>
+                    pour simplifier la vie universitaire, au projet
+                    <span class="text-primary font-medium">Mikanda</span>
+                    destiné à valoriser la littérature congolaise, chaque
+                    ligne de code répond à une utilité réelle.
+                  </p>
+                  <p>
+                    Au-delà du développement applicatif, j'explore avec
+                    rigueur les systèmes Linux, la conteneurisation, les
+                    réseaux informatiques (parcours Cisco CCNA) et
+                    l'intégration des modèles d'IA dans des produits de
+                    production.
+                  </p>
+                </div>
+                <!-- 6 Value Traits Grid -->
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-4">
+                  <div class="p-3.5 bg-surface-container-low rounded-2xl flex items-start gap-2.5">
+                    <span class="material-symbols-outlined text-primary text-[20px] shrink-0">psychology</span>
+                    <div>
+                      <p class="font-headline-sm text-[14px] leading-tight text-on-surface font-semibold"
+                        data-lang-en="Problem Solver" data-lang-fr="Résolution de Problèmes">
+                        Problem Solver
+                      </p>
+                      <p class="font-label-code text-[11px] text-on-surface-variant mt-0.5"
+                        data-lang-en="Complex to simple" data-lang-fr="Du complexe au fluide">
+                        Complex to simple
+                      </p>
+                    </div>
+                  </div>
+                  <div class="p-3.5 bg-surface-container-low rounded-2xl flex items-start gap-2.5">
+                    <span class="material-symbols-outlined text-primary text-[20px] shrink-0">menu_book</span>
+                    <div>
+                      <p class="font-headline-sm text-[14px] leading-tight text-on-surface font-semibold"
+                        data-lang-en="Always Learning" data-lang-fr="Apprentissage Continu">
+                        Always Learning
+                      </p>
+                      <p class="font-label-code text-[11px] text-on-surface-variant mt-0.5"
+                        data-lang-en="Daily tech upgrade" data-lang-fr="Veille quotidienne">
+                        Daily tech upgrade
+                      </p>
+                    </div>
+                  </div>
+                  <div class="p-3.5 bg-surface-container-low rounded-2xl flex items-start gap-2.5">
+                    <span class="material-symbols-outlined text-primary text-[20px] shrink-0">filter_center_focus</span>
+                    <div>
+                      <p class="font-headline-sm text-[14px] leading-tight text-on-surface font-semibold"
+                        data-lang-en="Detail Oriented" data-lang-fr="Souci du Détail">
+                        Detail Oriented
+                      </p>
+                      <p class="font-label-code text-[11px] text-on-surface-variant mt-0.5"
+                        data-lang-en="Pixel &amp; code craft" data-lang-fr="Précision et clarté">
+                        Pixel &amp; code craft
+                      </p>
+                    </div>
+                  </div>
+                  <div class="p-3.5 bg-surface-container-low rounded-2xl flex items-start gap-2.5">
+                    <span class="material-symbols-outlined text-primary text-[20px] shrink-0">group</span>
+                    <div>
+                      <p class="font-headline-sm text-[14px] leading-tight text-on-surface font-semibold"
+                        data-lang-en="Team Player" data-lang-fr="Esprit d'Équipe">
+                        Team Player
+                      </p>
+                      <p class="font-label-code text-[11px] text-on-surface-variant mt-0.5"
+                        data-lang-en="Open communication" data-lang-fr="Collaboration fluide">
+                        Open communication
+                      </p>
+                    </div>
+                  </div>
+                  <div class="p-3.5 bg-surface-container-low rounded-2xl flex items-start gap-2.5">
+                    <span class="material-symbols-outlined text-primary text-[20px] shrink-0">code</span>
+                    <div>
+                      <p class="font-headline-sm text-[14px] leading-tight text-on-surface font-semibold"
+                        data-lang-en="Clean Code" data-lang-fr="Code Épuré">
+                        Clean Code
+                      </p>
+                      <p class="font-label-code text-[11px] text-on-surface-variant mt-0.5"
+                        data-lang-en="Modular &amp; typed" data-lang-fr="Maintenable &amp; testé">
+                        Modular &amp; typed
+                      </p>
+                    </div>
+                  </div>
+                  <div class="p-3.5 bg-surface-container-low rounded-2xl flex items-start gap-2.5">
+                    <span class="material-symbols-outlined text-primary text-[20px] shrink-0">lightbulb</span>
+                    <div>
+                      <p class="font-headline-sm text-[14px] leading-tight text-on-surface font-semibold"
+                        data-lang-en="Curious Mind" data-lang-fr="Esprit Curieux">
+                        Curious Mind
+                      </p>
+                      <p class="font-label-code text-[11px] text-on-surface-variant mt-0.5"
+                        data-lang-en="Linux, AI &amp; net" data-lang-fr="Linux, IA et réseaux">
+                        Linux, AI &amp; net
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- ==================== 4. SKILLS & TECHNOLOGY ECOSYSTEM ==================== -->
+        <section class="py-16" id="skills">
+          <div class="space-y-8">
+            <!-- Section Title -->
+            <div class="text-center max-w-xl mx-auto space-y-2">
+              <span class="font-label-code text-label-code text-primary uppercase tracking-wider"
+                data-lang-en="Technical Stack" data-lang-fr="Stack Technique">Technical Stack</span>
+              <h2 class="font-headline-lg text-headline-lg text-on-surface font-bold"
+                data-lang-en="Skills &amp; Technologies" data-lang-fr="Compétences &amp; Technologies">
+                Skills &amp; Technologies
+              </h2>
+              <p class="font-body-md text-body-md text-on-surface-variant"
+                data-lang-en="A pragmatic developer ecosystem focused on scalable, typed, and resilient digital architectures."
+                data-lang-fr="Un écosystème axé sur des architectures modulaires, typées et performantes.">
+                A pragmatic developer ecosystem focused on scalable, typed,
+                and resilient digital architectures.
+              </p>
+            </div>
+            <!-- Category Filter Tabs -->
+            <div class="flex flex-wrap items-center justify-center gap-2" id="skill-filter-container">
+              <button
+                class="skill-tab active px-4 py-1.5 rounded-full bg-primary-container text-on-primary font-label-badge text-label-badge shadow-sm transition-all"
+                data-cat="all" onclick="filterSkills('all')" type="button">
+                All
+              </button>
+              <button
+                class="skill-tab px-4 py-1.5 rounded-full bg-surface-container-lowest text-on-surface font-label-badge text-label-badge hover:bg-surface-container transition-all"
+                data-cat="frontend" onclick="filterSkills('frontend')" type="button">
+                Frontend
+              </button>
+              <button
+                class="skill-tab px-4 py-1.5 rounded-full bg-surface-container-lowest text-on-surface font-label-badge text-label-badge hover:bg-surface-container transition-all"
+                data-cat="backend" onclick="filterSkills('backend')" type="button">
+                Backend &amp; APIs
+              </button>
+              <button
+                class="skill-tab px-4 py-1.5 rounded-full bg-surface-container-lowest text-on-surface font-label-badge text-label-badge hover:bg-surface-container transition-all"
+                data-cat="database" onclick="filterSkills('database')" type="button">
+                Databases
+              </button>
+              <button
+                class="skill-tab px-4 py-1.5 rounded-full bg-surface-container-lowest text-on-surface font-label-badge text-label-badge hover:bg-surface-container transition-all"
+                data-cat="systems" onclick="filterSkills('systems')" type="button">
+                DevOps &amp; Systems
+              </button>
+              <button
+                class="skill-tab px-4 py-1.5 rounded-full bg-surface-container-lowest text-on-surface font-label-badge text-label-badge hover:bg-surface-container transition-all"
+                data-cat="ai_tools" onclick="filterSkills('ai_tools')" type="button">
+                AI &amp; Tools
+              </button>
+            </div>
+            <!-- Skills Cards Grid -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-3 pt-4" id="skills-grid">
+              <!-- HTML5 -->
+              <div class="skill-card bg-surface-container-lowest p-4 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col items-center text-center group" data-category="frontend">
+                <div class="w-14 h-14 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+                  <img src="https://cdn.simpleicons.org/html5/E34F26" alt="HTML5" class="w-10 h-10 object-contain">
+                </div>
+                <span class="font-headline-sm text-[12px] font-semibold text-on-surface">HTML5</span>
+              </div>
+              <!-- CSS3 -->
+              <div class="skill-card bg-surface-container-lowest p-4 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col items-center text-center group" data-category="frontend">
+                <div class="w-14 h-14 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS3" class="w-10 h-10 object-contain">
+                </div>
+                <span class="font-headline-sm text-[12px] font-semibold text-on-surface">CSS3</span>
+              </div>
+              <!-- JavaScript -->
+              <div class="skill-card bg-surface-container-lowest p-4 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col items-center text-center group" data-category="frontend">
+                <div class="w-14 h-14 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+                  <img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="JavaScript" class="w-10 h-10 object-contain">
+                </div>
+                <span class="font-headline-sm text-[12px] font-semibold text-on-surface">JavaScript</span>
+              </div>
+              <!-- TypeScript -->
+              <div class="skill-card bg-surface-container-lowest p-4 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col items-center text-center group" data-category="frontend">
+                <div class="w-14 h-14 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+                  <img src="https://cdn.simpleicons.org/typescript/3178C6" alt="TypeScript" class="w-10 h-10 object-contain">
+                </div>
+                <span class="font-headline-sm text-[12px] font-semibold text-on-surface">TypeScript</span>
+              </div>
+              <!-- React -->
+              <div class="skill-card bg-surface-container-lowest p-4 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col items-center text-center group" data-category="frontend">
+                <div class="w-14 h-14 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+                  <img src="https://cdn.simpleicons.org/react/61DAFB" alt="React" class="w-10 h-10 object-contain">
+                </div>
+                <span class="font-headline-sm text-[12px] font-semibold text-on-surface">React</span>
+              </div>
+              <!-- Tailwind CSS -->
+              <div class="skill-card bg-surface-container-lowest p-4 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col items-center text-center group" data-category="frontend">
+                <div class="w-14 h-14 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+                  <img src="https://cdn.simpleicons.org/tailwindcss/06B6D4" alt="Tailwind CSS" class="w-10 h-10 object-contain">
+                </div>
+                <span class="font-headline-sm text-[12px] font-semibold text-on-surface">Tailwind CSS</span>
+              </div>
+              <!-- Node.js -->
+              <div class="skill-card bg-surface-container-lowest p-4 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col items-center text-center group" data-category="backend">
+                <div class="w-14 h-14 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+                  <img src="https://cdn.simpleicons.org/nodedotjs/339933" alt="Node.js" class="w-10 h-10 object-contain">
+                </div>
+                <span class="font-headline-sm text-[12px] font-semibold text-on-surface">Node.js</span>
+              </div>
+              <!-- Express.js -->
+              <div class="skill-card bg-surface-container-lowest p-4 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col items-center text-center group" data-category="backend">
+                <div class="w-14 h-14 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+                  <img src="https://cdn.simpleicons.org/express/000000" alt="Express.js" class="w-10 h-10 object-contain" style="filter: var(--express-filter, none);">
+                </div>
+                <span class="font-headline-sm text-[12px] font-semibold text-on-surface">Express.js</span>
+              </div>
+              <!-- Python -->
+              <div class="skill-card bg-surface-container-lowest p-4 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col items-center text-center group" data-category="backend">
+                <div class="w-14 h-14 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+                  <img src="https://cdn.simpleicons.org/python/3776AB" alt="Python" class="w-10 h-10 object-contain">
+                </div>
+                <span class="font-headline-sm text-[12px] font-semibold text-on-surface">Python</span>
+              </div>
+              <!-- Django -->
+              <div class="skill-card bg-surface-container-lowest p-4 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col items-center text-center group" data-category="backend">
+                <div class="w-14 h-14 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+                  <img src="https://cdn.simpleicons.org/django/092E20" alt="Django" class="w-10 h-10 object-contain">
+                </div>
+                <span class="font-headline-sm text-[12px] font-semibold text-on-surface">Django</span>
+              </div>
+              <!-- FastAPI -->
+              <div class="skill-card bg-surface-container-lowest p-4 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col items-center text-center group" data-category="backend">
+                <div class="w-14 h-14 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+                  <img src="https://cdn.simpleicons.org/fastapi/009688" alt="FastAPI" class="w-10 h-10 object-contain">
+                </div>
+                <span class="font-headline-sm text-[12px] font-semibold text-on-surface">FastAPI</span>
+              </div>
+              <!-- MySQL -->
+              <div class="skill-card bg-surface-container-lowest p-4 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col items-center text-center group" data-category="database">
+                <div class="w-14 h-14 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+                  <img src="https://cdn.simpleicons.org/mysql/4479A1" alt="MySQL" class="w-10 h-10 object-contain">
+                </div>
+                <span class="font-headline-sm text-[12px] font-semibold text-on-surface">MySQL</span>
+              </div>
+              <!-- PostgreSQL -->
+              <div class="skill-card bg-surface-container-lowest p-4 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col items-center text-center group" data-category="database">
+                <div class="w-14 h-14 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+                  <img src="https://cdn.simpleicons.org/postgresql/336791" alt="PostgreSQL" class="w-10 h-10 object-contain">
+                </div>
+                <span class="font-headline-sm text-[12px] font-semibold text-on-surface">PostgreSQL</span>
+              </div>
+              <!-- Linux -->
+              <div class="skill-card bg-surface-container-lowest p-4 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col items-center text-center group" data-category="systems">
+                <div class="w-14 h-14 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+                  <img src="https://cdn.simpleicons.org/linux/FCC624" alt="Linux" class="w-10 h-10 object-contain">
+                </div>
+                <span class="font-headline-sm text-[12px] font-semibold text-on-surface">Linux</span>
+              </div>
+              <!-- Docker -->
+              <div class="skill-card bg-surface-container-lowest p-4 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col items-center text-center group" data-category="systems">
+                <div class="w-14 h-14 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+                  <img src="https://cdn.simpleicons.org/docker/2496ED" alt="Docker" class="w-10 h-10 object-contain">
+                </div>
+                <span class="font-headline-sm text-[12px] font-semibold text-on-surface">Docker</span>
+              </div>
+              <!-- Git -->
+              <div class="skill-card bg-surface-container-lowest p-4 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col items-center text-center group" data-category="systems">
+                <div class="w-14 h-14 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+                  <img src="https://cdn.simpleicons.org/git/F05032" alt="Git" class="w-10 h-10 object-contain">
+                </div>
+                <span class="font-headline-sm text-[12px] font-semibold text-on-surface">Git</span>
+              </div>
+              <!-- GitHub -->
+              <div class="skill-card bg-surface-container-lowest p-4 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col items-center text-center group" data-category="systems">
+                <div class="w-14 h-14 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+                  <img src="https://cdn.simpleicons.org/github/181717" alt="GitHub" class="w-10 h-10 object-contain" style="filter: var(--github-filter, none);">
+                </div>
+                <span class="font-headline-sm text-[12px] font-semibold text-on-surface">GitHub</span>
+              </div>
+              <!-- Flutter -->
+              <div class="skill-card bg-surface-container-lowest p-4 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col items-center text-center group" data-category="frontend">
+                <div class="w-14 h-14 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+                  <img src="https://cdn.simpleicons.org/flutter/02569B" alt="Flutter" class="w-10 h-10 object-contain">
+                </div>
+                <span class="font-headline-sm text-[12px] font-semibold text-on-surface">Flutter</span>
+              </div>
+              <!-- Figma -->
+              <div class="skill-card bg-surface-container-lowest p-4 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col items-center text-center group" data-category="ai_tools">
+                <div class="w-14 h-14 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+                  <img src="https://cdn.simpleicons.org/figma/F24E1E" alt="Figma" class="w-10 h-10 object-contain">
+                </div>
+                <span class="font-headline-sm text-[12px] font-semibold text-on-surface">Figma</span>
+              </div>
+              <!-- Illustrator -->
+              <div class="skill-card bg-surface-container-lowest p-4 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col items-center text-center group" data-category="ai_tools">
+                <div class="w-14 h-14 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/illustrator/illustrator-plain.svg" alt="Illustrator" class="w-10 h-10 object-contain">
+                </div>
+                <span class="font-headline-sm text-[12px] font-semibold text-on-surface">Illustrator</span>
+              </div>
+              <!-- VS Code -->
+              <div class="skill-card bg-surface-container-lowest p-4 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col items-center text-center group" data-category="ai_tools">
+                <div class="w-14 h-14 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" alt="VS Code" class="w-10 h-10 object-contain">
+                </div>
+                <span class="font-headline-sm text-[12px] font-semibold text-on-surface">VS Code</span>
+              </div>
+              <!-- Postman -->
+              <div class="skill-card bg-surface-container-lowest p-4 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col items-center text-center group" data-category="ai_tools">
+                <div class="w-14 h-14 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+                  <img src="https://cdn.simpleicons.org/postman/FF6C37" alt="Postman" class="w-10 h-10 object-contain">
+                </div>
+                <span class="font-headline-sm text-[12px] font-semibold text-on-surface">Postman</span>
+              </div>
+              <!-- Vercel -->
+              <div class="skill-card bg-surface-container-lowest p-4 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col items-center text-center group" data-category="systems">
+                <div class="w-14 h-14 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+                  <img src="https://cdn.simpleicons.org/vercel/000000" alt="Vercel" class="w-10 h-10 object-contain" style="filter: var(--vercel-filter, none);">
+                </div>
+                <span class="font-headline-sm text-[12px] font-semibold text-on-surface">Vercel</span>
+              </div>
+              <!-- Render -->
+              <div class="skill-card bg-surface-container-lowest p-4 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col items-center text-center group" data-category="systems">
+                <div class="w-14 h-14 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+                  <img src="https://cdn.simpleicons.org/render/46E3B7" alt="Render" class="w-10 h-10 object-contain">
+                </div>
+                <span class="font-headline-sm text-[12px] font-semibold text-on-surface">Render</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- ==================== 5. SERVICES & WHAT I BRING ==================== -->
+        <section class="py-16" id="services">
+          <div class="space-y-10">
+            <div>
+              <div class="inline-flex items-center gap-2 mb-1">
+                <span class="font-label-code text-label-code text-primary uppercase tracking-wider"
+                  data-lang-en="Capabilities" data-lang-fr="Capacités">Capabilities</span>
+              </div>
+              <h2 class="font-headline-lg text-headline-lg text-on-surface font-bold"
+                data-lang-en="Services &amp; What I Bring" data-lang-fr="Services &amp; Ce Que J'apporte">
+                Services &amp; What I Bring
+              </h2>
+              <p class="font-body-lg text-body-lg text-on-surface-variant mt-1"
+                data-lang-en="Bridging design sensibilities with rock-solid engineering."
+                data-lang-fr="Allier sensibilité design et rigueur d'ingénierie.">
+                Bridging design sensibilities with rock-solid engineering.
+              </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <!-- 01 Web Development -->
+              <div
+                class="bg-surface-container-lowest p-6 rounded-3xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                <div>
+                  <div class="flex items-center justify-between mb-4">
+                    <span class="font-label-code text-headline-sm text-primary font-bold">01</span>
+                    <span class="material-symbols-outlined text-primary-container text-[24px]">devices</span>
+                  </div>
+                  <h3 class="font-headline-md text-headline-sm text-on-surface font-bold mb-2"
+                    data-lang-en="Web Development" data-lang-fr="Développement Web">
+                    Web Development
+                  </h3>
+                  <p class="font-body-md text-body-md text-on-surface-variant"
+                    data-lang-en="Building clean, responsive, and high-performance websites and web applications using React, JavaScript, and Tailwind CSS."
+                    data-lang-fr="Création de sites et d'applications modernes, réactifs et ultra-rapides avec React, JavaScript et Tailwind CSS.">
+                    Building clean, responsive, and high-performance websites
+                    and web applications using React, JavaScript, and Tailwind
+                    CSS.
+                  </p>
+                </div>
+                <div
+                  class="mt-6 pt-4 border-t border-surface-container-high/50 font-label-code text-[11px] text-on-surface-variant">
+                  React • Next.js • Responsive Design
+                </div>
+              </div>
+              <!-- 02 Full-Stack Development -->
+              <div
+                class="bg-surface-container-lowest p-6 rounded-3xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                <div>
+                  <div class="flex items-center justify-between mb-4">
+                    <span class="font-label-code text-headline-sm text-primary font-bold">02</span>
+                    <span class="material-symbols-outlined text-primary-container text-[24px]">layers</span>
+                  </div>
+                  <h3 class="font-headline-md text-headline-sm text-on-surface font-bold mb-2"
+                    data-lang-en="Full-Stack Engineering" data-lang-fr="Ingénierie Full-Stack">
+                    Full-Stack Engineering
+                  </h3>
+                  <p class="font-body-md text-body-md text-on-surface-variant"
+                    data-lang-en="End-to-end development connecting polished frontend experiences to robust Node/Express backends and structured relational databases."
+                    data-lang-fr="Développement de bout en bout reliant interfaces soignées, backends Node/Express et bases de données relationnelles.">
+                    End-to-end development connecting polished frontend
+                    experiences to robust Node/Express backends and structured
+                    relational databases.
+                  </p>
+                </div>
+                <div
+                  class="mt-6 pt-4 border-t border-surface-container-high/50 font-label-code text-[11px] text-on-surface-variant">
+                  Frontend + Backend + DB Architecture
+                </div>
+              </div>
+              <!-- 03 API Development -->
+              <div
+                class="bg-surface-container-lowest p-6 rounded-3xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                <div>
+                  <div class="flex items-center justify-between mb-4">
+                    <span class="font-label-code text-headline-sm text-primary font-bold">03</span>
+                    <span class="material-symbols-outlined text-primary-container text-[24px]">api</span>
+                  </div>
+                  <h3 class="font-headline-md text-headline-sm text-on-surface font-bold mb-2"
+                    data-lang-en="APIs &amp; Microservices" data-lang-fr="APIs &amp; Microservices">
+                    APIs &amp; Microservices
+                  </h3>
+                  <p class="font-body-md text-body-md text-on-surface-variant"
+                    data-lang-en="Designing and deploying secure, well-documented REST APIs with JWT authentication, role management, and real-time Socket.IO integration."
+                    data-lang-fr="Conception et déploiement d'APIs REST sécurisées avec JWT, gestion des rôles et intégrations temps réel Socket.IO.">
+                    Designing and deploying secure, well-documented REST APIs
+                    with JWT authentication, role management, and real-time
+                    Socket.IO integration.
+                  </p>
+                </div>
+                <div
+                  class="mt-6 pt-4 border-t border-surface-container-high/50 font-label-code text-[11px] text-on-surface-variant">
+                  Express • Python • JWT • WebSockets
+                </div>
+              </div>
+              <!-- 04 SaaS & Product Development -->
+              <div
+                class="bg-surface-container-lowest p-6 rounded-3xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                <div>
+                  <div class="flex items-center justify-between mb-4">
+                    <span class="font-label-code text-headline-sm text-primary font-bold">04</span>
+                    <span class="material-symbols-outlined text-primary-container text-[24px]">inventory_2</span>
+                  </div>
+                  <h3 class="font-headline-md text-headline-sm text-on-surface font-bold mb-2"
+                    data-lang-en="SaaS &amp; Web Products" data-lang-fr="Produits Web &amp; SaaS">
+                    SaaS &amp; Web Products
+                  </h3>
+                  <p class="font-body-md text-body-md text-on-surface-variant"
+                    data-lang-en="Transforming startup concepts into functional minimum viable products with clean UX, authorization workflows, and maintainable schemas."
+                    data-lang-fr="Transformation de concepts en MVPs viables avec flux d'authentification soignés et architectures évolutives.">
+                    Transforming startup concepts into functional minimum
+                    viable products with clean UX, authorization workflows,
+                    and maintainable schemas.
+                  </p>
+                </div>
+                <div
+                  class="mt-6 pt-4 border-t border-surface-container-high/50 font-label-code text-[11px] text-on-surface-variant">
+                  MVP Delivery • Product Logic • User Flows
+                </div>
+              </div>
+              <!-- 05 Cultural & EdTech Platforms -->
+              <div
+                class="bg-surface-container-lowest p-6 rounded-3xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                <div>
+                  <div class="flex items-center justify-between mb-4">
+                    <span class="font-label-code text-headline-sm text-primary font-bold">05</span>
+                    <span class="material-symbols-outlined text-primary-container text-[24px]">school</span>
+                  </div>
+                  <h3 class="font-headline-md text-headline-sm text-on-surface font-bold mb-2"
+                    data-lang-en="EdTech &amp; Cultural Platforms" data-lang-fr="EdTech &amp; Plateformes Culturelles">
+                    EdTech &amp; Cultural Platforms
+                  </h3>
+                  <p class="font-body-md text-body-md text-on-surface-variant"
+                    data-lang-en="Crafting meaningful platforms for communities, student networks, digital libraries, and cultural preservation initiatives."
+                    data-lang-fr="Création de plateformes à fort impact pour la communauté estudiantine, les bibliothèques et la culture.">
+                    Crafting meaningful platforms for communities, student
+                    networks, digital libraries, and cultural preservation
+                    initiatives.
+                  </p>
+                </div>
+                <div
+                  class="mt-6 pt-4 border-t border-surface-container-high/50 font-label-code text-[11px] text-on-surface-variant">
+                  Social Utility • Accessibility • Content Discovery
+                </div>
+              </div>
+              <!-- 06 Linux Optimization & Systems -->
+              <div
+                class="bg-surface-container-lowest p-6 rounded-3xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                <div>
+                  <div class="flex items-center justify-between mb-4">
+                    <span class="font-label-code text-headline-sm text-primary font-bold">06</span>
+                    <span class="material-symbols-outlined text-primary-container text-[24px]">terminal</span>
+                  </div>
+                  <h3 class="font-headline-md text-headline-sm text-on-surface font-bold mb-2"
+                    data-lang-en="Linux &amp; Systems Setup" data-lang-fr="Linux &amp; Administration Système">
+                    Linux &amp; Systems Setup
+                  </h3>
+                  <p class="font-body-md text-body-md text-on-surface-variant"
+                    data-lang-en="Server setup, Bash automation, reverse proxies (Nginx), network subnetting, and production deployment environments."
+                    data-lang-fr="Configuration de serveurs, scripts Bash, proxies inverses Nginx, adressage réseau et déploiements cloud.">
+                    Server setup, Bash automation, reverse proxies (Nginx),
+                    network subnetting, and production deployment
+                    environments.
+                  </p>
+                </div>
+                <div
+                  class="mt-6 pt-4 border-t border-surface-container-high/50 font-label-code text-[11px] text-on-surface-variant">
+                  Ubuntu/Debian • Nginx • Cisco Networking
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- ==================== 6. FEATURED PROJECTS ==================== -->
+        <section class="py-16" id="projects">
+          <div class="space-y-10">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+              <div>
+                <div class="inline-flex items-center gap-2 mb-1">
+                  <span class="font-label-code text-label-code text-primary uppercase tracking-wider"
+                    data-lang-en="Portfolio Highlights" data-lang-fr="Projets Phares">Portfolio Highlights</span>
+                </div>
+                <h2 class="font-headline-lg text-headline-lg text-on-surface font-bold" data-lang-en="Selected Work"
+                  data-lang-fr="Projets Réalisés">
+                  Selected Work
+                </h2>
+                <p class="font-body-lg text-body-lg text-on-surface-variant mt-1"
+                  data-lang-en="Digital solutions built with purpose, code craftsmanship, and modern web architecture."
+                  data-lang-fr="Solutions numériques pensées avec rigueur et construites pour durer.">
+                  Digital solutions built with purpose, code craftsmanship,
+                  and modern web architecture.
+                </p>
+              </div>
+              <a class="inline-flex items-center gap-1.5 text-primary hover:text-on-surface font-headline-sm text-body-md transition-colors"
+                href="https://github.com/bonheur84" rel="noopener noreferrer" target="_blank">
+                <span>View All on GitHub</span>
+                <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+              </a>
+            </div>
+            <!-- 3 Rich Project Cards Grid matching reference layout -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <!-- PROJECT 01: CampusGuide -->
+              <div
+                class="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col group">
+                <!-- Canvas Top Preview -->
+                  <div class="w-full h-[220px] overflow-hidden">
+                    <img src="image copy.png" alt="Project Preview" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                  </div>
+                  <!-- Bottom Content -->
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                  <div>
+                    <div class="flex items-center justify-between">
+                      <h3 class="font-headline-md text-headline-sm text-on-surface font-bold">
+                        CampusGuide
+                      </h3>
+                      <a aria-label="CampusGuide GitHub"
+                        class="text-on-surface-variant hover:text-primary transition-colors"
+                        href="https://github.com/bonheur84/CampusGuide" rel="noopener noreferrer" target="_blank">
+                        <span class="material-symbols-outlined text-[20px]">north_east</span>
+                      </a>
+                    </div>
+                    <p class="font-body-md text-body-md text-on-surface-variant mt-2 line-clamp-3"
+                      data-lang-en="A modern university platform designed to simplify student life by unifying academic mentorship, campus clubs, event schedules, and live notifications into a cohesive hub."
+                      data-lang-fr="Plateforme universitaire conçue pour simplifier la vie étudiante en centralisant mentorat, clubs de campus, événements et notifications en temps réel.">
+                      A modern university platform designed to simplify
+                      student life by unifying academic mentorship, campus
+                      clubs, event schedules, and live notifications into a
+                      cohesive hub.
+                    </p>
+                  </div>
+                  <div class="pt-6">
+                    <div
+                      class="flex flex-wrap items-center gap-1.5 font-label-code text-[11px] text-on-surface-variant">
+                      <span>React</span> • <span>Node.js</span> •
+                      <span>Express</span> • <span>MySQL</span> •
+                      <span>Socket.IO</span>
+                    </div>
+                    <div class="pt-4 flex items-center justify-between">
+                      <button class="text-primary hover:underline font-label-badge text-label-badge font-semibold"
+                        onclick="openCaseStudyModal()" type="button">
+                        Read Case Study →
+                      </button>
+                      <a class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-surface-container-low text-on-surface font-label-code text-[11px] hover:bg-surface-container transition-colors"
+                        href="https://github.com/bonheur84/CampusGuide" rel="noopener noreferrer" target="_blank">
+                        <span class="material-symbols-outlined text-[14px]">code</span>
+                        <span>Repo</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- PROJECT 02: Portfolio -->
+              <div
+                class="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col group">
+                <!-- Canvas Top Preview -->
+                  <div class="w-full h-[220px] overflow-hidden">
+                    <img src="image.png" alt="Project Preview" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                  </div>
+                  <!-- Bottom Content -->
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                  <div>
+                    <div class="flex items-center justify-between">
+                      <h3 class="font-headline-md text-headline-sm text-on-surface font-bold">
+                        Personal Portfolio
+                      </h3>
+                      <a aria-label="Portfolio GitHub"
+                        class="text-on-surface-variant hover:text-primary transition-colors"
+                        href="https://github.com/bonheur84/portfolio" rel="noopener noreferrer" target="_blank">
+                        <span class="material-symbols-outlined text-[20px]">north_east</span>
+                      </a>
+                    </div>
+                    <p class="font-body-md text-body-md text-on-surface-variant mt-2 line-clamp-3"
+                      data-lang-en="An editorial personal developer website built to present technical capability, architectural thinking, bilingual localization, and high-precision typography."
+                      data-lang-fr="Portfolio personnel éditorial conçu pour valoriser compétences techniques, démarche d'ingénierie, bilinguisme et typographie soignée.">
+                      An editorial personal developer website built to present
+                      technical capability, architectural thinking, bilingual
+                      localization, and high-precision typography.
+                    </p>
+                  </div>
+                  <div class="pt-6">
+                    <div
+                      class="flex flex-wrap items-center gap-1.5 font-label-code text-[11px] text-on-surface-variant">
+                      <span>React</span> • <span>Tailwind CSS</span> •
+                      <span>JavaScript</span> • <span>Responsive</span>
+                    </div>
+                    <div class="pt-4 flex items-center justify-between">
+                      <span class="font-label-badge text-label-badge text-primary-container font-semibold">Active
+                        Production</span>
+                      <a class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-surface-container-low text-on-surface font-label-code text-[11px] hover:bg-surface-container transition-colors"
+                        href="https://github.com/bonheur84/portfolio" rel="noopener noreferrer" target="_blank">
+                        <span class="material-symbols-outlined text-[14px]">code</span>
+                        <span>Repo</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- PROJECT 03: Mikanda -->
+              <div
+                class="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col group">
+                <!-- Canvas Top Preview -->
+                  <div class="w-full h-[220px] overflow-hidden">
+                    <img src="Opera Snapshot_2026-04-07_093130_127.0.0.1.png" alt="Project Preview" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                  </div>
+                  <!-- Bottom Content -->
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                  <div>
+                    <div class="flex items-center justify-between">
+                      <h3 class="font-headline-md text-headline-sm text-on-surface font-bold">
+                        Mikanda
+                      </h3>
+                      <a aria-label="Mikanda GitHub"
+                        class="text-on-surface-variant hover:text-primary transition-colors"
+                        href="https://github.com/bonheur84/mikanda" rel="noopener noreferrer" target="_blank">
+                        <span class="material-symbols-outlined text-[20px]">north_east</span>
+                      </a>
+                    </div>
+                    <p class="font-body-md text-body-md text-on-surface-variant mt-2 line-clamp-3"
+                      data-lang-en="A cultural technology platform dedicated to making Congolese literature accessible to all, encouraging young people to discover, read, and celebrate local literary works."
+                      data-lang-fr="Plateforme technologique et culturelle valorisant la littérature congolaise en facilitant l'accès aux livres et à la lecture pour la jeunesse.">
+                      A cultural technology platform dedicated to making
+                      Congolese literature accessible to all, encouraging
+                      young people to discover, read, and celebrate local
+                      literary works.
+                    </p>
+                  </div>
+                  <div class="pt-6">
+                    <div
+                      class="flex flex-wrap items-center gap-1.5 font-label-code text-[11px] text-on-surface-variant">
+                      <span>React</span> • <span>Node.js</span> •
+                      <span>Express</span> • <span>MySQL</span> •
+                      <span>JWT</span>
+                    </div>
+                    <div class="pt-4 flex items-center justify-between">
+                      <span class="font-label-badge text-label-badge text-primary font-semibold">Cultural Tech</span>
+                      <a class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-surface-container-low text-on-surface font-label-code text-[11px] hover:bg-surface-container transition-colors"
+                        href="https://github.com/bonheur84/mikanda" rel="noopener noreferrer" target="_blank">
+                        <span class="material-symbols-outlined text-[14px]">code</span>
+                        <span>Repo</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- ==================== 7. PROJECT CASE STUDY SPOTLIGHT ==================== -->
+        <section class="py-12">
+          <div class="bg-surface-container-low rounded-3xl p-8 lg:p-10 shadow-sm space-y-8">
+            <div
+              class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-6 border-b border-surface-container-high">
+              <div>
+                <span class="font-label-code text-label-code text-primary uppercase font-bold tracking-wider">Spotlight
+                  Deep Dive</span>
+                <h3 class="font-headline-lg text-headline-lg text-on-surface font-bold mt-1">
+                  CampusGuide: System Architecture &amp; Execution
+                </h3>
+              </div>
+              <a class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-container text-on-primary font-label-badge text-label-badge self-start lg:self-auto hover:bg-primary transition-all"
+                href="https://github.com/bonheur84/CampusGuide" rel="noopener noreferrer" target="_blank">
+                <span>Explore Source Code</span>
+                <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+              </a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div class="space-y-2">
+                <p class="font-label-code text-label-code text-primary font-semibold">
+                  THE PROBLEM
+                </p>
+                <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                  Students face scattered university communication across
+                  uncoordinated WhatsApp groups, notice boards, and informal
+                  threads, leading to missed mentorship programs, disorganized
+                  club activities, and fragmented schedules.
+                </p>
+              </div>
+              <div class="space-y-2">
+                <p class="font-label-code text-label-code text-primary font-semibold">
+                  THE ARCHITECTURAL SOLUTION
+                </p>
+                <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                  Built an integrated single-page React frontend supported by
+                  an Express/Node backend. Implemented normalized relational
+                  schemas in MySQL, stateless JWT session authentication, and
+                  WebSocket streams for immediate event broadcasts.
+                </p>
+              </div>
+              <div class="space-y-2">
+                <p class="font-label-code text-label-code text-primary font-semibold">
+                  KEY OUTCOMES
+                </p>
+                <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                  Delivered structured mentorship matchmaking, an organized
+                  student club directory, automated push notifications, and
+                  verified campus profile management with responsive mobile
+                  UX.
+                </p>
+              </div>
+            </div>
+            <!-- Mini Architecture Diagram Strip -->
+            <div
+              class="bg-surface-container-lowest p-5 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-4 font-label-code text-[12px] text-on-surface">
+              <div class="flex items-center gap-2">
+                <span
+                  class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary font-bold">FE</span>
+                <div>
+                  <p class="font-semibold text-on-surface">React Client</p>
+                  <p class="text-[11px] text-on-surface-variant">
+                    Tailwind UI • State
+                  </p>
+                </div>
+              </div>
+              <span class="material-symbols-outlined text-primary-container rotate-90 md:rotate-0">arrow_forward</span>
+              <div class="flex items-center gap-2">
+                <span
+                  class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary font-bold">API</span>
+                <div>
+                  <p class="font-semibold text-on-surface">
+                    Express / Node.js
+                  </p>
+                  <p class="text-[11px] text-on-surface-variant">
+                    REST • JWT Auth • WSS
+                  </p>
+                </div>
+              </div>
+              <span class="material-symbols-outlined text-primary-container rotate-90 md:rotate-0">arrow_forward</span>
+              <div class="flex items-center gap-2">
+                <span
+                  class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary font-bold">DB</span>
+                <div>
+                  <p class="font-semibold text-on-surface">
+                    MySQL Relational
+                  </p>
+                  <p class="text-[11px] text-on-surface-variant">
+                    Indexed FK • Clean Schemas
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- ==================== 8. WORK EXPERIENCE ==================== -->
+        <section class="py-16" id="experience">
+          <div class="space-y-10">
+            <div>
+              <div class="inline-flex items-center gap-2 mb-1">
+                <span class="font-label-code text-label-code text-primary uppercase tracking-wider"
+                  data-lang-en="Career Path" data-lang-fr="Parcours Professionnel">Career Path</span>
+              </div>
+              <h2 class="font-headline-lg text-headline-lg text-on-surface font-bold" data-lang-en="Work Experience"
+                data-lang-fr="Expérience Professionnelle">
+                Work Experience
+              </h2>
+              <p class="font-body-lg text-body-lg text-on-surface-variant mt-1"
+                data-lang-en="Hands-on professional execution in enterprise human resources and operational administration."
+                data-lang-fr="Expérience pratique au sein d'environnements d'entreprise et de gestion des ressources humaines.">
+                Hands-on professional execution in enterprise human resources
+                and operational administration.
+              </p>
+            </div>
+            <!-- Experience Reference Style Horizontal/Stacked Node -->
+            <div class="space-y-4">
+              <div class="bg-surface-container-lowest p-6 rounded-3xl shadow-sm hover:shadow-md transition-all">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                  <div class="flex items-start gap-4">
+                    <div
+                      class="w-20 h-12 rounded-2xl bg-primary-fixed/50 flex items-center justify-center text-primary shrink-0">
+                      <img src="image copy 2.png" alt="Logo" class="h-8 w-16 object-contain group-hover:opacity-80 transition-opacity">
+                    </div>
+                    <div>
+                      <h3 class="font-headline-md text-headline-sm text-on-surface font-bold">
+                        SODEICO MANPOWER
+                      </h3>
+                      <p class="font-body-md text-body-md text-on-surface-variant">
+                        Intern / Trainee • HR &amp; Administrative Operations
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="font-label-code text-label-badge text-primary bg-surface-container px-3.5 py-1.5 rounded-full self-start md:self-auto font-medium">
+                    04 August – 07 November
+                  </div>
+                </div>
+                <div
+                  class="mt-5 grid grid-cols-1 md:grid-cols-3 gap-4 pt-4 border-t border-surface-container-high/60 font-body-md text-body-md text-on-surface-variant">
+                  <div class="flex items-start gap-2">
+                    <span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check_circle</span>
+                    <span data-lang-en="Candidate recruitment support and screening workflows."
+                      data-lang-fr="Assistance au recrutement et au traitement des dossiers candidats.">Candidate
+                      recruitment support and screening
+                      workflows.</span>
+                  </div>
+                  <div class="flex items-start gap-2">
+                    <span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check_circle</span>
+                    <span data-lang-en="Contract classification, document indexing &amp; archiving."
+                      data-lang-fr="Classification des contrats et archivage documentaire.">Contract classification,
+                      document indexing &amp;
+                      archiving.</span>
+                  </div>
+                  <div class="flex items-start gap-2">
+                    <span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check_circle</span>
+                    <span data-lang-en="Office productivity tools mastery (Excel, Word, documentation)."
+                      data-lang-fr="Gestion bureautique avancée (Excel, Word et correspondances).">Office productivity
+                      tools mastery (Excel, Word,
+                      documentation).</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- ==================== 9. EDUCATION & ACADEMIC JOURNEY ==================== -->
+        <section class="py-16" id="education">
+          <div class="space-y-10">
+            <div>
+              <div class="inline-flex items-center gap-2 mb-1">
+                <span class="font-label-code text-label-code text-primary uppercase tracking-wider"
+                  data-lang-en="Academic Foundation" data-lang-fr="Formation Académique">Academic Foundation</span>
+              </div>
+              <h2 class="font-headline-lg text-headline-lg text-on-surface font-bold"
+                data-lang-en="Education &amp; Studies" data-lang-fr="Études &amp; Diplômes">
+                Education &amp; Studies
+              </h2>
+              <p class="font-body-lg text-body-lg text-on-surface-variant mt-1"
+                data-lang-en="Rigorous foundation in computer science, scientific thinking, and language competency."
+                data-lang-fr="Une solide formation scientifique, technologique et linguistique.">
+                Rigorous foundation in computer science, scientific thinking,
+                and language competency.
+              </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <!-- Université Nouveaux Horizons -->
+              <div
+                class="bg-surface-container-lowest p-6 rounded-3xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-primary-fixed/30 rounded-bl-full pointer-events-none">
+                </div>
+                <div>
+                  <div class="flex items-center justify-between mb-3">
+                    <span
+                      class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-container text-on-primary font-label-badge text-label-badge">
+                      <span class="w-2 h-2 rounded-full bg-surface animate-pulse"></span>
+                      <span>In Progress</span>
+                    </span>
+                    <span class="font-label-code text-label-code text-on-surface-variant">2025 – Present</span>
+                  </div>
+                  <h3 class="font-headline-md text-headline-sm text-on-surface font-bold">
+                    Bachelor's Degree in Computer Science
+                  </h3>
+                  <p class="font-body-lg text-body-md text-primary font-semibold mt-1">
+                    Specialization: Artificial Intelligence (AI)
+                  </p>
+                  <p class="font-body-md text-body-md text-on-surface-variant mt-2">
+                    Université Nouveaux Horizons (UNH) • Lubumbashi, DRC
+                  </p>
+                </div>
+                <p
+                  class="font-label-code text-[11px] text-on-surface-variant pt-4 mt-4 border-t border-surface-container-high/60">
+                  Algorithms • Software Engineering • Machine Learning Core
+                </p>
+              </div>
+              <!-- INPP -->
+              <div
+                class="bg-surface-container-lowest p-6 rounded-3xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                <div>
+                  <div class="flex items-center justify-between mb-3">
+                    <span
+                      class="inline-flex items-center px-3 py-1 rounded-full bg-surface-container text-on-surface font-label-badge text-label-badge">Completed</span>
+                    <span class="font-label-code text-label-code text-on-surface-variant">Feb 2025 – July 2025</span>
+                  </div>
+                  <h3 class="font-headline-md text-headline-sm text-on-surface font-bold">
+                    Professional Certificate in Computer &amp; Office Skills
+                  </h3>
+                  <p class="font-body-lg text-body-md text-secondary font-semibold mt-1">
+                    Vocational Computer Proficiency
+                  </p>
+                  <p class="font-body-md text-body-md text-on-surface-variant mt-2">
+                    Institut National de Préparation Professionnelle (INPP)
+                  </p>
+                </div>
+                <p
+                  class="font-label-code text-[11px] text-on-surface-variant pt-4 mt-4 border-t border-surface-container-high/60">
+                  Digital Workplace • IT Productivity • Systems Operations
+                </p>
+              </div>
+              <!-- NUST English -->
+              <div
+                class="bg-surface-container-lowest p-6 rounded-3xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                <div>
+                  <div class="flex items-center justify-between mb-3">
+                    <span
+                      class="inline-flex items-center px-3 py-1 rounded-full bg-surface-container text-on-surface font-label-badge text-label-badge">Graduate</span>
+                    <span class="font-label-code text-label-code text-on-surface-variant">2024 – 2025</span>
+                  </div>
+                  <h3 class="font-headline-md text-headline-sm text-on-surface font-bold">
+                    English Language Diploma
+                  </h3>
+                  <p class="font-body-lg text-body-md text-secondary font-semibold mt-1">
+                    Professional &amp; Academic Fluency
+                  </p>
+                  <p class="font-body-md text-body-md text-on-surface-variant mt-2">
+                    National University of Science and Technology (NUST)
+                  </p>
+                </div>
+                <p
+                  class="font-label-code text-[11px] text-on-surface-variant pt-4 mt-4 border-t border-surface-container-high/60">
+                  Technical Writing • Oral Proficiency • Global Collaboration
+                </p>
+              </div>
+              <!-- Collège Tutazamie -->
+              <div
+                class="bg-surface-container-lowest p-6 rounded-3xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                <div>
+                  <div class="flex items-center justify-between mb-3">
+                    <span
+                      class="inline-flex items-center px-3 py-1 rounded-full bg-surface-container text-on-surface font-label-badge text-label-badge">State
+                      Diploma</span>
+                    <span class="font-label-code text-label-code text-on-surface-variant">2022 – 2023</span>
+                  </div>
+                  <h3 class="font-headline-md text-headline-sm text-on-surface font-bold">
+                    Baccalaureate / Diplôme d'État
+                  </h3>
+                  <p class="font-body-lg text-body-md text-secondary font-semibold mt-1">
+                    Scientific Track (Mathematics &amp; Physics)
+                  </p>
+                  <p class="font-body-md text-body-md text-on-surface-variant mt-2">
+                    Collège Tutazamie
+                  </p>
+                </div>
+                <p
+                  class="font-label-code text-[11px] text-on-surface-variant pt-4 mt-4 border-t border-surface-container-high/60">
+                  Advanced Mathematics • Physics • Analytical Logic
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- ==================== 10. CERTIFICATIONS & TRAINING ==================== -->
+        <section class="py-12">
+          <div class="bg-surface-container-lowest rounded-3xl p-8 shadow-sm space-y-6">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+              <div>
+                <span class="font-label-code text-label-code text-primary uppercase font-bold">Accreditations</span>
+                <h3 class="font-headline-lg text-headline-md text-on-surface font-bold mt-0.5">
+                  Certifications &amp; Technical Training
+                </h3>
+              </div>
+              <span class="material-symbols-outlined text-primary text-[32px]">verified</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div class="p-4 bg-surface-container-low rounded-2xl flex items-start gap-3">
+                <span class="material-symbols-outlined text-primary text-[24px] shrink-0">network_check</span>
+                <div>
+                  <p class="font-headline-sm text-[15px] font-bold text-on-surface">
+                    CompTIA Network+
+                  </p>
+                  <p class="font-body-md text-body-md text-on-surface-variant mt-0.5">
+                    Network Architecture, OSI model, IP addressing &amp;
+                    troubleshooting fundamentals.
+                  </p>
+                </div>
+              </div>
+              <div class="p-4 bg-surface-container-low rounded-2xl flex items-start gap-3">
+                <span class="material-symbols-outlined text-primary text-[24px] shrink-0">router</span>
+                <div>
+                  <p class="font-headline-sm text-[15px] font-bold text-on-surface">
+                    Cisco CCNA (Track)
+                  </p>
+                  <p class="font-body-md text-body-md text-on-surface-variant mt-0.5">
+                    Routing &amp; switching, VLANs, ACLs, IPv4/IPv6,
+                    subnetting and infrastructure security.
+                  </p>
+                </div>
+              </div>
+              <div class="p-4 bg-surface-container-low rounded-2xl flex items-start gap-3">
+                <span class="material-symbols-outlined text-primary text-[24px] shrink-0">badge</span>
+                <div>
+                  <p class="font-headline-sm text-[15px] font-bold text-on-surface">
+                    INPP Office &amp; Systems
+                  </p>
+                  <p class="font-body-md text-body-md text-on-surface-variant mt-0.5">
+                    State professional computer certification for
+                    administrative and operational IT.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- ==================== 11. BEYOND THE CODE (Technical Passions) ==================== -->
+        <section class="py-16">
+          <div class="space-y-8">
+            <div class="max-w-2xl space-y-3">
+              <span class="font-label-code text-label-code text-primary uppercase tracking-wider">Under The Hood</span>
+              <h2 class="font-headline-lg text-headline-lg text-on-surface font-bold">
+                Beyond the Code
+              </h2>
+              <blockquote
+                class="font-body-lg text-body-lg text-on-surface italic border-l-2 border-primary-container pl-4">
+                "I am interested not only in building interfaces, but also in
+                understanding the systems, networks and technologies behind
+                the products I create."
+              </blockquote>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              <!-- AI & Neural Networks -->
+              <div class="bg-surface-container-lowest p-6 rounded-3xl shadow-sm hover:shadow-md transition-all">
+                <div
+                  class="w-10 h-10 rounded-xl bg-primary-fixed/50 flex items-center justify-center text-primary mb-4">
+                  <span class="material-symbols-outlined text-[22px]">neurology</span>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">
+                  AI &amp; Neural Nets
+                </h3>
+                <p class="font-body-md text-body-md text-on-surface-variant mt-2">
+                  Investigating deep learning foundations, transformer models,
+                  prompt engineering, and their application to practical
+                  African challenges.
+                </p>
+              </div>
+              <!-- Linux Kernel & Shell -->
+              <div class="bg-surface-container-lowest p-6 rounded-3xl shadow-sm hover:shadow-md transition-all">
+                <div
+                  class="w-10 h-10 rounded-xl bg-secondary-container/50 flex items-center justify-center text-secondary mb-4">
+                  <span class="material-symbols-outlined text-[22px]">terminal</span>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">
+                  Linux Internals
+                </h3>
+                <p class="font-body-md text-body-md text-on-surface-variant mt-2">
+                  Comfortable working in headless Unix terminals, automating
+                  tasks with Bash, daemon management via systemd, and cron
+                  scheduling.
+                </p>
+              </div>
+              <!-- Computer Networking -->
+              <div class="bg-surface-container-lowest p-6 rounded-3xl shadow-sm hover:shadow-md transition-all">
+                <div
+                  class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-primary mb-4">
+                  <span class="material-symbols-outlined text-[22px]">lan</span>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">
+                  Networking &amp; Routing
+                </h3>
+                <p class="font-body-md text-body-md text-on-surface-variant mt-2">
+                  Understanding packet transmission, TCP/UDP sockets, DNS
+                  resolution hierarchies, and Cisco routing topologies from
+                  first principles.
+                </p>
+              </div>
+              <!-- Clean Architecture -->
+              <div class="bg-surface-container-lowest p-6 rounded-3xl shadow-sm hover:shadow-md transition-all">
+                <div
+                  class="w-10 h-10 rounded-xl bg-primary-container text-on-primary flex items-center justify-center mb-4">
+                  <span class="material-symbols-outlined text-[22px]">architecture</span>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">
+                  Clean Architecture
+                </h3>
+                <p class="font-body-md text-body-md text-on-surface-variant mt-2">
+                  Separation of concerns, idempotent API endpoints, typed
+                  contracts, and maintainable software patterns that scale
+                  gracefully.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- ==================== 12. DEVELOPMENT PROCESS ==================== -->
+        <section class="py-16">
+          <div class="space-y-10">
+            <div class="text-center max-w-xl mx-auto space-y-2">
+              <span class="font-label-code text-label-code text-primary uppercase tracking-wider">Methodology</span>
+              <h2 class="font-headline-lg text-headline-lg text-on-surface font-bold">
+                My Engineering Process
+              </h2>
+              <p class="font-body-md text-body-md text-on-surface-variant">
+                From first principles to continuous post-launch iteration.
+              </p>
+            </div>
+            <!-- Horizontal Process Timeline matching reference design -->
+            <div class="relative w-full max-w-[1120px] mx-auto pt-8">
+              <!-- Dashed Line for Desktop -->
+              <div class="hidden lg:block absolute top-[60px] left-[7%] right-[7%] border-t-2 border-dashed border-gray-300 z-0"></div>
+              
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-7 gap-8 lg:gap-2 relative z-10">
+                <!-- 01 Discover -->
+                <div class="flex flex-col items-center text-center bg-background lg:bg-transparent">
+                  <div class="w-14 h-14 rounded-full bg-[#f96e1b] flex items-center justify-center text-white mb-4 shadow-lg shadow-[#f96e1b]/30">
+                    <span class="material-symbols-outlined text-[24px]">search</span>
+                  </div>
+                  <span class="font-bold text-[#f96e1b] text-sm">01</span>
+                  <h3 class="font-bold text-gray-900 text-base mt-1">Discover</h3>
+                  <p class="text-gray-500 text-[13px] mt-2 px-2 leading-relaxed">
+                    Understand the problem and the real user needs.
+                  </p>
+                </div>
+                
+                <!-- 02 Plan -->
+                <div class="flex flex-col items-center text-center bg-background lg:bg-transparent">
+                  <div class="w-14 h-14 rounded-full bg-white border-[1.5px] border-gray-200 flex items-center justify-center text-[#f96e1b] mb-4">
+                    <span class="material-symbols-outlined text-[24px]">content_paste</span>
+                  </div>
+                  <span class="font-bold text-[#f96e1b] text-sm">02</span>
+                  <h3 class="font-bold text-gray-900 text-base mt-1">Plan</h3>
+                  <p class="text-gray-500 text-[13px] mt-2 px-2 leading-relaxed">
+                    Define the architecture, features and technical approach.
+                  </p>
+                </div>
+                
+                <!-- 03 Design -->
+                <div class="flex flex-col items-center text-center bg-background lg:bg-transparent">
+                  <div class="w-14 h-14 rounded-full bg-white border-[1.5px] border-gray-200 flex items-center justify-center text-[#f96e1b] mb-4">
+                    <span class="material-symbols-outlined text-[24px]">web</span>
+                  </div>
+                  <span class="font-bold text-[#f96e1b] text-sm">03</span>
+                  <h3 class="font-bold text-gray-900 text-base mt-1">Design</h3>
+                  <p class="text-gray-500 text-[13px] mt-2 px-2 leading-relaxed">
+                    Create clear and intuitive user experiences.
+                  </p>
+                </div>
+                
+                <!-- 04 Develop -->
+                <div class="flex flex-col items-center text-center bg-background lg:bg-transparent">
+                  <div class="w-14 h-14 rounded-full bg-[#f96e1b] flex items-center justify-center text-white mb-4 shadow-lg shadow-[#f96e1b]/30">
+                    <span class="material-symbols-outlined text-[24px]">code</span>
+                  </div>
+                  <span class="font-bold text-[#f96e1b] text-sm">04</span>
+                  <h3 class="font-bold text-gray-900 text-base mt-1">Develop</h3>
+                  <p class="text-gray-500 text-[13px] mt-2 px-2 leading-relaxed">
+                    Build clean, maintainable and scalable software.
+                  </p>
+                </div>
+                
+                <!-- 05 Test -->
+                <div class="flex flex-col items-center text-center bg-background lg:bg-transparent">
+                  <div class="w-14 h-14 rounded-full bg-white border-[1.5px] border-gray-200 flex items-center justify-center text-[#f96e1b] mb-4">
+                    <span class="material-symbols-outlined text-[24px]">check_circle</span>
+                  </div>
+                  <span class="font-bold text-[#f96e1b] text-sm">05</span>
+                  <h3 class="font-bold text-gray-900 text-base mt-1">Test</h3>
+                  <p class="text-gray-500 text-[13px] mt-2 px-2 leading-relaxed">
+                    Validate functionality, usability and reliability.
+                  </p>
+                </div>
+                
+                <!-- 06 Deploy -->
+                <div class="flex flex-col items-center text-center bg-background lg:bg-transparent">
+                  <div class="w-14 h-14 rounded-full bg-white border-[1.5px] border-gray-200 flex items-center justify-center text-[#f96e1b] mb-4">
+                    <span class="material-symbols-outlined text-[24px]">publish</span>
+                  </div>
+                  <span class="font-bold text-[#f96e1b] text-sm">06</span>
+                  <h3 class="font-bold text-gray-900 text-base mt-1">Deploy</h3>
+                  <p class="text-gray-500 text-[13px] mt-2 px-2 leading-relaxed">
+                    Ship the product using modern deployment tools.
+                  </p>
+                </div>
+                
+                <!-- 07 Improve -->
+                <div class="flex flex-col items-center text-center bg-background lg:bg-transparent sm:col-span-2 lg:col-span-1">
+                  <div class="w-14 h-14 rounded-full bg-[#f96e1b] flex items-center justify-center text-white mb-4 shadow-lg shadow-[#f96e1b]/30">
+                    <span class="material-symbols-outlined text-[24px]">trending_up</span>
+                  </div>
+                  <span class="font-bold text-[#f96e1b] text-sm">07</span>
+                  <h3 class="font-bold text-gray-900 text-base mt-1">Improve</h3>
+                  <p class="text-gray-500 text-[13px] mt-2 px-2 leading-relaxed">
+                    Monitor, learn and continuously improve.
+                  </p>
+                </div>
+              </div>
+            </div>
+</div>
+        </section>
+        <!-- ==================== 13. ALWAYS LEARNING & SPOKEN LANGUAGES ==================== -->
+        <section class="py-12">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            <!-- Continuous Growth Banner -->
+            <div
+              class="lg:col-span-8 bg-surface-container-lowest p-8 rounded-3xl shadow-sm flex flex-col justify-between space-y-4">
+              <div>
+                <span class="font-label-code text-label-code text-primary uppercase font-bold">Growth Mindset</span>
+                <h3 class="font-headline-lg text-headline-md text-on-surface font-bold mt-1">
+                  Always Learning, Always Building
+                </h3>
+                <p class="font-body-lg text-body-lg text-on-surface-variant mt-3 leading-relaxed">
+                  "I believe becoming a better developer is a continuous
+                  process. Every project, challenge, and mistake is an
+                  opportunity to improve."
+                </p>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+                <div class="p-3 bg-surface-container-low rounded-xl">
+                  <p class="font-label-code text-[11px] text-primary font-bold">
+                    CURRENT FOCUS
+                  </p>
+                  <p class="font-headline-sm text-[13px] font-semibold text-on-surface mt-1">
+                    Large Language Models &amp; AI Integration
+                  </p>
+                </div>
+                <div class="p-3 bg-surface-container-low rounded-xl">
+                  <p class="font-label-code text-[11px] text-primary font-bold">
+                    SYSTEMS DEEP DIVE
+                  </p>
+                  <p class="font-headline-sm text-[13px] font-semibold text-on-surface mt-1">
+                    Linux Kernel &amp; Networking Protocols
+                  </p>
+                </div>
+                <div class="p-3 bg-surface-container-low rounded-xl">
+                  <p class="font-label-code text-[11px] text-primary font-bold">
+                    COMMUNITY
+                  </p>
+                  <p class="font-headline-sm text-[13px] font-semibold text-on-surface mt-1">
+                    Mentoring &amp; Open Source in DRC
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- 14. Spoken Languages Card -->
+            <div
+              class="lg:col-span-4 bg-surface-container-lowest p-8 rounded-3xl shadow-sm flex flex-col justify-between space-y-4">
+              <div>
+                <span class="font-label-code text-label-code text-primary uppercase font-bold">Polyglot</span>
+                <h3 class="font-headline-lg text-headline-md text-on-surface font-bold mt-1">
+                  Spoken Languages
+                </h3>
+                <p class="font-body-md text-body-md text-on-surface-variant mt-1">
+                  Multi-lingual communication for global collaboration.
+                </p>
+              </div>
+              <div class="space-y-3 pt-2">
+                <div class="flex items-center justify-between p-2.5 bg-surface-container-low rounded-xl">
+                  <span class="font-headline-sm text-[14px] font-semibold text-on-surface">French</span>
+                  <span
+                    class="font-label-badge text-label-badge text-primary bg-surface-container-lowest px-2.5 py-0.5 rounded-full font-semibold">Native
+                    / Fluent</span>
+                </div>
+                <div class="flex items-center justify-between p-2.5 bg-surface-container-low rounded-xl">
+                  <span class="font-headline-sm text-[14px] font-semibold text-on-surface">English</span>
+                  <span
+                    class="font-label-badge text-label-badge text-primary bg-surface-container-lowest px-2.5 py-0.5 rounded-full font-semibold">Professional
+                    (NUST)</span>
+                </div>
+                <div class="flex items-center justify-between p-2.5 bg-surface-container-low rounded-xl">
+                  <span class="font-headline-sm text-[14px] font-semibold text-on-surface">Lingala</span>
+                  <span
+                    class="font-label-badge text-label-badge text-on-surface-variant bg-surface-container-lowest px-2.5 py-0.5 rounded-full">Fluent</span>
+                </div>
+                <div class="flex items-center justify-between p-2.5 bg-surface-container-low rounded-xl">
+                  <span class="font-headline-sm text-[14px] font-semibold text-on-surface">Swahili</span>
+                  <span
+                    class="font-label-badge text-label-badge text-on-surface-variant bg-surface-container-lowest px-2.5 py-0.5 rounded-full">Conversational</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- ==================== 15. CONTACT SYSTEM & INQUIRY ==================== -->
+        <section class="py-16" id="contact">
+          <div class="bg-surface-container-lowest rounded-3xl p-8 lg:p-12 shadow-sm space-y-12">
+            <!-- Headline & Subtitle -->
+            <div class="text-center max-w-2xl mx-auto space-y-3">
+              <div class="inline-flex items-center gap-2">
+                <span class="font-label-code text-label-code text-primary uppercase font-bold">Get In Touch</span>
+              </div>
+              <h2 class="font-headline-lg text-headline-lg text-on-surface font-extrabold">
+                Let's build something
+                <span class="text-primary-container">meaningful together.</span>
+              </h2>
+              <p class="font-body-lg text-body-lg text-on-surface-variant">
+                From ideas to responsive interfaces, APIs, and complete
+                digital products — let's create something useful and lasting.
+              </p>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+              <!-- Left: Direct Metadata & Social Links -->
+              <div class="lg:col-span-5 flex flex-col justify-between space-y-8">
+                <div class="space-y-5">
+                  <div class="flex items-start gap-4">
+                    <div
+                      class="w-12 h-12 rounded-2xl bg-surface-container-low flex items-center justify-center text-primary shrink-0">
+                      <span class="material-symbols-outlined text-[22px]">mail</span>
+                    </div>
+                    <div>
+                      <p class="font-label-code text-label-code text-on-surface-variant">
+                        Direct Email
+                      </p>
+                      <a class="font-headline-sm text-headline-sm text-on-surface hover:text-primary transition-colors font-bold break-all"
+                        href="mailto:nzaubonheur84@gmail.com">
+                        nzaubonheur84@gmail.com
+                      </a>
+                    </div>
+                  </div>
+                  <div class="flex items-start gap-4">
+                    <div
+                      class="w-12 h-12 rounded-2xl bg-surface-container-low flex items-center justify-center text-primary shrink-0">
+                      <span class="material-symbols-outlined text-[22px]">call</span>
+                    </div>
+                    <div>
+                      <p class="font-label-code text-label-code text-on-surface-variant">
+                        Direct Phone
+                      </p>
+                      <a class="font-headline-sm text-headline-sm text-on-surface hover:text-primary transition-colors font-bold"
+                        href="tel:0975079756">
+                        +243 975 079 756
+                      </a>
+                    </div>
+                  </div>
+                  <div class="flex items-start gap-4">
+                    <div
+                      class="w-12 h-12 rounded-2xl bg-surface-container-low flex items-center justify-center text-primary shrink-0">
+                      <span class="material-symbols-outlined text-[22px]">location_on</span>
+                    </div>
+                    <div>
+                      <p class="font-label-code text-label-code text-on-surface-variant">
+                        Location
+                      </p>
+                      <p class="font-headline-sm text-headline-sm text-on-surface font-bold">
+                        Lubumbashi, Democratic Republic of the Congo
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Architecture transparency card -->
+                <div
+                  class="p-5 bg-surface-container-low rounded-2xl space-y-2 font-label-code text-[11px] text-on-surface-variant">
+                  <div class="flex items-center gap-1.5 text-primary font-bold">
+                    <span class="material-symbols-outlined text-[16px]">verified_user</span>
+                    <span>PRODUCTION CONTACT PIPELINE</span>
+                  </div>
+                  <p>
+                    Visitor Form → Client Validation → Secure Serverless
+                    Handler → Anti-Spam Check → Direct Dispatch to
+                    nzaubonheur84@gmail.com.
+                  </p>
+                  <div class="pt-2">
+                    
+                  </div>
+                </div>
+              </div>
+              <!-- Right: Interactive Validated Contact Form -->
+              <div class="lg:col-span-7 bg-surface-container-low p-6 sm:p-8 rounded-3xl">
+                <form class="space-y-4" id="contact-form" onsubmit="handleContactSubmit(event)">
+                  <!-- Honeypot anti-spam (hidden) -->
+                  <input autocomplete="off" class="hidden" name="_gotcha" tabindex="-1" type="text" />
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label class="block font-label-badge text-label-badge text-on-surface font-semibold mb-1"
+                        for="contact-name">Your Name *</label>
+                      <input
+                        class="w-full px-4 py-3 rounded-xl bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary shadow-sm placeholder:text-on-surface-variant/50"
+                        id="contact-name" placeholder="e.g. Sarah Jenkins" required="" type="text" />
+                    </div>
+                    <div>
+                      <label class="block font-label-badge text-label-badge text-on-surface font-semibold mb-1"
+                        for="contact-email">Email Address *</label>
+                      <input
+                        class="w-full px-4 py-3 rounded-xl bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary shadow-sm placeholder:text-on-surface-variant/50"
+                        id="contact-email" placeholder="sarah@example.com" required="" type="email" />
+                    </div>
+                  </div>
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label class="block font-label-badge text-label-badge text-on-surface font-semibold mb-1"
+                        for="contact-type">Project Category</label>
+                      <select
+                        class="w-full px-4 py-3 rounded-xl bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary shadow-sm"
+                        id="contact-type">
+                        <option value="Full-Stack Web App">
+                          Full-Stack Web App
+                        </option>
+                        <option value="React Frontend UI">
+                          React Frontend UI
+                        </option>
+                        <option value="API / Backend Service">
+                          API / Backend Service
+                        </option>
+                        <option value="AI / Machine Learning Exploration">
+                          AI / Machine Learning
+                        </option>
+                        <option value="EdTech / Cultural Platform">
+                          EdTech / Cultural Platform
+                        </option>
+                        <option value="Linux Systems Consulting">
+                          Linux Systems Consulting
+                        </option>
+                      </select>
+                    </div>
+                    <div>
+                      <label class="block font-label-badge text-label-badge text-on-surface font-semibold mb-1"
+                        for="contact-subject">Subject</label>
+                      <input
+                        class="w-full px-4 py-3 rounded-xl bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary shadow-sm placeholder:text-on-surface-variant/50"
+                        id="contact-subject" placeholder="New collaboration inquiry" type="text" />
+                    </div>
+                  </div>
+                  <div>
+                    <label class="block font-label-badge text-label-badge text-on-surface font-semibold mb-1"
+                      for="contact-message">Your Message *</label>
+                    <textarea
+                      class="w-full px-4 py-3 rounded-xl bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary shadow-sm placeholder:text-on-surface-variant/50"
+                      id="contact-message" placeholder="Tell me about your goals, timelines, or questions..."
+                      required="" rows="4"></textarea>
+                  </div>
+                  <button
+                    class="w-full py-3.5 px-6 rounded-xl bg-primary-container text-on-primary font-headline-sm text-body-md hover:bg-primary transition-all shadow-md flex items-center justify-center gap-2"
+                    id="submit-btn" type="submit">
+                    <span>Send Message</span>
+                    <span class="material-symbols-outlined text-[18px]">send</span>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- ==================== MODAL: CASE STUDY (CAMPUSGUIDE) ==================== -->
+        <div
+          class="fixed inset-0 z-50 bg-inverse-surface/60 backdrop-blur-sm hidden items-center justify-center p-4"
+          id="case-study-modal">
+          <div
+            class="bg-surface rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 shadow-2xl relative space-y-6">
+            <button
+              class="absolute top-6 right-6 w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface hover:bg-surface-container-high transition-colors"
+              onclick="closeCaseStudyModal()" type="button">
+              <span class="material-symbols-outlined text-[20px]">close</span>
+            </button>
+            <div class="space-y-1">
+              <span class="font-label-code text-label-code text-primary font-bold">CASE STUDY BREAKDOWN</span>
+              <h3 class="font-headline-lg text-headline-md text-on-surface font-bold">
+                CampusGuide • In-Depth Architecture
+              </h3>
+              <p class="font-body-md text-body-md text-on-surface-variant">
+                Built for Université Nouveaux Horizons Student Ecosystem
+              </p>
+            </div>
+            <div class="space-y-4 font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              <div class="p-4 bg-surface-container-low rounded-2xl">
+                <p class="font-headline-sm text-[15px] font-bold text-on-surface mb-1">
+                  Architecture Highlights
+                </p>
+                <ul class="list-disc list-inside space-y-1">
+                  <li>
+                    Front-end: Modular React components styled with Tailwind
+                    CSS utility classes.
+                  </li>
+                  <li>
+                    Backend: Express.js routing layer with controllers and
+                    service-pattern isolation.
+                  </li>
+                  <li>
+                    Database: MySQL schema with relational foreign keys for
+                    users, clubs, events, and mentorship pairings.
+                  </li>
+                  <li>
+                    Real-Time: WebSockets (Socket.IO) handling live club
+                    broadcasts and instant mentor alerts.
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <p class="font-headline-sm text-[15px] font-bold text-on-surface mb-1">
+                  Key Challenges Solved
+                </p>
+                <p>
+                  Handling state synchronization across mentor session
+                  scheduling while preventing double bookings. Resolved via
+                  transactional row locks in MySQL and optimistic client UI
+                  updates.
+                </p>
+              </div>
+              <div>
+                <p class="font-headline-sm text-[15px] font-bold text-on-surface mb-1">
+                  Repository &amp; Live Assets
+                </p>
+                <a class="inline-flex items-center gap-1.5 text-primary font-semibold hover:underline"
+                  href="https://github.com/bonheur84/CampusGuide" rel="noopener noreferrer" target="_blank">
+                  <span class="material-symbols-outlined text-[16px]">code</span>
+                  <span>github.com/bonheur84/CampusGuide</span>
+                </a>
+              </div>
+            </div>
+            <div class="pt-4 border-t border-surface-container-high flex justify-end">
+              <button
+                class="px-5 py-2.5 rounded-full bg-surface-container text-on-surface font-headline-sm text-body-md hover:bg-surface-container-high transition-colors"
+                onclick="closeCaseStudyModal()" type="button">
+                Close Case Study
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- ==================== MODAL: SUCCESS CONFIRMATION ==================== -->
+        <div
+          class="fixed inset-0 z-50 bg-inverse-surface/60 backdrop-blur-sm hidden items-center justify-center p-4"
+          id="success-modal">
+          <div class="bg-surface rounded-3xl max-w-md w-full p-8 shadow-2xl text-center space-y-4">
+            <div class="w-16 h-16 rounded-full bg-primary-fixed flex items-center justify-center text-primary mx-auto">
+              <span class="material-symbols-outlined text-[36px]">check_circle</span>
+            </div>
+            <h3 class="font-headline-lg text-headline-md text-on-surface font-bold">
+              Message Dispatched!
+            </h3>
+            <p class="font-body-md text-body-md text-on-surface-variant">
+              Thank you for reaching out,
+              <span class="font-semibold text-on-surface" id="sent-user-name">Friend</span>. Your message has been
+              routed to Bonheur Nzau at
+              <strong class="text-primary">nzaubonheur84@gmail.com</strong>.
+              Expect a response shortly.
+            </p>
+            <button
+              class="w-full py-3 rounded-full bg-primary-container text-on-primary font-headline-sm text-body-md hover:bg-primary transition-all"
+              onclick="closeSuccessModal()" type="button">
+              Done
+            </button>
+          </div>
+        </div>
+        <!-- ==================== MODAL: ADMIN DISPATCH PREVIEW ==================== -->
+        <div
+          class="fixed inset-0 z-50 bg-inverse-surface/60 backdrop-blur-sm hidden items-center justify-center p-4"
+          id="admin-modal">
+          <div class="bg-surface rounded-3xl max-w-2xl w-full p-6 sm:p-8 shadow-2xl space-y-6">
+            <div class="flex items-center justify-between">
+              <div>
+                <span class="font-label-code text-label-code text-primary font-bold">ADMIN PREVIEW MODE</span>
+                <h3 class="font-headline-md text-headline-sm text-on-surface font-bold">
+                  Inquiry Management Stream
+                </h3>
+              </div>
+              <button
+                class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface hover:bg-surface-container-high"
+                onclick="closeAdminModal()" type="button">
+                <span class="material-symbols-outlined text-[18px]">close</span>
+              </button>
+            </div>
+            <div class="space-y-3 font-label-code text-label-code">
+              <div class="p-3 bg-surface-container-low rounded-xl flex items-center justify-between">
+                <div>
+                  <span class="text-primary font-bold">[NEW]</span> Sarah
+                  Jenkins • sarah@example.com
+                  <p class="text-[11px] text-on-surface-variant mt-0.5">
+                    "Interested in building a responsive EdTech application
+                    with React..."
+                  </p>
+                </div>
+                <span class="text-[10px] text-on-surface-variant">2m ago</span>
+              </div>
+              <div class="p-3 bg-surface-container-low rounded-xl flex items-center justify-between">
+                <div>
+                  <span class="text-on-surface-variant font-bold">[READ]</span>
+                  UNH Research Group • contact@unh.cd
+                  <p class="text-[11px] text-on-surface-variant mt-0.5">
+                    "Collaboration inquiry regarding local AI datasets in
+                    Lubumbashi..."
+                  </p>
+                </div>
+                <span class="text-[10px] text-on-surface-variant">Yesterday</span>
+              </div>
+            </div>
+            <div
+              class="p-4 bg-surface-container-low rounded-2xl font-label-code text-[11px] text-on-surface-variant flex items-center justify-between">
+              <span>Target Endpoint: /api/contact → Resend + PostgreSQL</span>
+              <span class="text-primary font-bold">STATUS: OK</span>
+            </div>
+            <div class="flex justify-end">
+              <button
+                class="px-5 py-2 rounded-full bg-surface-container text-on-surface font-label-badge text-label-badge hover:bg-surface-container-high"
+                onclick="closeAdminModal()" type="button">
+                Exit Admin Preview
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="w-full bg-surface-container-lowest py-16 shadow-[0_-1px_8px_rgba(0,0,0,0.02)]">
+    <div class="max-w-[1120px] mx-auto px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row justify-between items-start gap-10 pb-12">
+        <div class="space-y-3 max-w-md">
+          <div class="flex items-center gap-2">
+            <img src="assets/logo.png" alt="Logo" class="h-12 w-12 object-contain">
+          </div>
+          <p class="font-body-md text-body-md text-on-surface-variant font-medium">
+            Computer Science Student &amp; Full-Stack Developer
+          </p>
+          <div class="flex items-center gap-1.5 text-on-surface-variant font-label-code text-label-code pt-1">
+            <span class="material-symbols-outlined text-[16px] text-primary">location_on</span><span>Lubumbashi,
+              Democratic Republic of the Congo</span>
+          </div>
+          <p class="font-body-md text-body-md text-on-surface-variant pt-2">
+            Built with curiosity, code &amp; continuous learning.
+          </p>
+        </div>
+        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6">
+          <div class="flex items-center gap-3">
+            <a aria-label="GitHub Profile"
+              class="w-10 h-10 rounded-xl bg-surface-container-low hover:bg-primary-fixed flex items-center justify-center transition-colors"
+              href="https://github.com/bonheur84" rel="noopener noreferrer" target="_blank"><img src="https://cdn.simpleicons.org/github/181717" alt="GitHub" class="w-5 h-5 object-contain" style="filter: var(--github-filter, none);"></a><a aria-label="LinkedIn Profile"
+              class="w-10 h-10 rounded-xl bg-surface-container-low hover:bg-primary-fixed flex items-center justify-center transition-colors"
+              href="https://linkedin.com" rel="noopener noreferrer" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg" alt="LinkedIn" class="w-5 h-5 object-contain"></a><a aria-label="Instagram Profile"
+              class="w-10 h-10 rounded-xl bg-surface-container-low hover:bg-primary-fixed flex items-center justify-center transition-colors"
+              href="https://www.instagram.com/boo_nheur/" rel="noopener noreferrer" target="_blank"><img src="https://cdn.simpleicons.org/instagram/E4405F" alt="Instagram" class="w-5 h-5 object-contain"></a><a aria-label="Email Contact"
+              class="w-10 h-10 rounded-xl bg-surface-container-low hover:bg-primary-fixed flex items-center justify-center transition-colors"
+              href="mailto:nzaubonheur84@gmail.com"><img src="https://cdn.simpleicons.org/gmail/EA4335" alt="Email" class="w-5 h-5 object-contain"></a>
+          </div>
+          <div class="flex items-center gap-3 pl-0 sm:pl-6">
+            <div class="flex items-center bg-surface-container-low p-1 rounded-full text-label-badge font-label-badge">
+              <button
+                class="px-2 py-0.5 rounded-full bg-surface-container-lowest text-on-surface font-semibold shadow-[0_1px_2px_rgba(0,0,0,0.04)]"
+                type="button">
+                EN</button><button class="px-2 py-0.5 rounded-full text-on-surface-variant hover:text-on-surface"
+                type="button">
+                FR
+              </button>
+            </div>
+            <button aria-label="Toggle theme in footer"
+              class="w-8 h-8 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors"
+              type="button">
+              <span class="material-symbols-outlined text-[18px]">light_mode</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 font-body-md text-body-md text-on-surface-variant">
+        <p>© 2026 Bonheur Nzau. All rights reserved.</p>
+        <div class="flex items-center gap-6">
+          <a class="hover:text-on-surface transition-colors" data-path="projects" href="#">Selected Works</a><a
+            class="hover:text-on-surface transition-colors" data-path="contact" href="#">Get In Touch</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

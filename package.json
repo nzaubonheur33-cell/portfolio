@@ -1,0 +1,21 @@
+{
+  "name": "bonheur-nzau-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio personnel de Bonheur Nzau - Full-Stack Developer",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx tailwindcss -i ./css/input.css -o ./css/output.css --watch",
+    "build": "npx tailwindcss -i ./css/input.css -o ./css/output.css --minify"
+  },
+  "keywords": [
+    "portfolio",
+    "web",
+    "development",
+    "full-stack"
+  ],
+  "author": "Bonheur Nzau",
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss": "^3.4.0"
+  }
+}
