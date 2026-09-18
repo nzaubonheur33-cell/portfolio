@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import App from './App';
 import './i18n';
-import '../css/input.css';
+import './index.css';
 import { ThemeProvider } from './ThemeContext';
 
 // Admin pages
