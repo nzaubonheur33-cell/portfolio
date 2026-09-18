@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useTheme } from '../ThemeContext';
 
 function Navbar() {
   const { t, i18n } = useTranslation();
+  const { theme, toggleTheme } = useTheme();
   const [activeSection, setActiveSection] = useState('hero');
 
   const changeLanguage = (lang) => {
@@ -88,11 +90,15 @@ function Navbar() {
             </button>
           </div>
           <button
-            aria-label="Toggle theme"
+            onClick={toggleTheme}
+            aria-label={theme === 'dark' ? "Switch to light mode" : "Switch to dark mode"}
+            title={theme === 'dark' ? "Switch to light mode" : "Switch to dark mode"}
             className="w-8 h-8 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors"
             type="button"
           >
-            <span className="material-symbols-outlined text-[18px]">light_mode</span>
+            <span className="material-symbols-outlined text-[18px]">
+              {theme === 'dark' ? 'light_mode' : 'dark_mode'}
+            </span>
           </button>
           <a
             className="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 bg-primary-container text-on-primary rounded-full font-label-badge text-label-badge hover:bg-primary transition-all shadow-[0_2px_10px_-2px_rgba(249,115,22,0.3)]"

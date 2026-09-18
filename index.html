@@ -15,6 +15,18 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
     rel="stylesheet" />
+  <script>
+    (function () {
+      try {
+        var localTheme = window.localStorage.getItem('theme');
+        if (localTheme === 'dark' || (!localTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.add('light');
+        }
+      } catch (e) { }
+    })();
+  </script>
 </head>
 <body class="bg-background font-body-md text-body-md text-on-surface antialiased selection:bg-primary-fixed selection:text-on-primary-fixed">
   <div id="root"></div>
