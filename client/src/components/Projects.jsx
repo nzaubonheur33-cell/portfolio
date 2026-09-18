@@ -57,7 +57,7 @@ function Projects() {
             {/* PROJECT 01: CampusGuide */}
             <div className="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col group">
               <div className="w-full h-[220px] overflow-hidden">
-                <img src="image copy.png" alt="CampusGuide Preview" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80" alt="CampusGuide Preview" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
               </div>
               <div className="p-6 flex-1 flex flex-col justify-between">
                 <div>
@@ -107,7 +107,7 @@ function Projects() {
             {/* PROJECT 02: Portfolio */}
             <div className="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col group">
               <div className="w-full h-[220px] overflow-hidden">
-                <img src="image.png" alt="Portfolio Preview" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <img src="https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?auto=format&fit=crop&w=800&q=80" alt="Portfolio Preview" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
               </div>
               <div className="p-6 flex-1 flex flex-col justify-between">
                 <div>
@@ -153,7 +153,7 @@ function Projects() {
             {/* PROJECT 03: Mikanda */}
             <div className="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col group">
               <div className="w-full h-[220px] overflow-hidden">
-                <img src="Opera Snapshot_2026-04-07_093130_127.0.0.1.png" alt="Mikanda Preview" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80" alt="Mikanda Preview" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
               </div>
               <div className="p-6 flex-1 flex flex-col justify-between">
                 <div>
