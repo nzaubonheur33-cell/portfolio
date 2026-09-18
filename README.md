@@ -51,6 +51,7 @@ portfolio/
 ## 🚀 Démarrage rapide
 
 ### Prérequis
+
 - Node.js 18+
 - MySQL 8+
 
@@ -106,31 +107,22 @@ npm run dev
 
 ## 🌐 URLs
 
-| Service | URL |
-|---|---|
-| Portfolio | http://localhost:5173 |
-| Admin | http://localhost:5173/admin |
-| API | http://localhost:5000/api |
+| Service   | URL                         |
+| --------- | --------------------------- |
+| Portfolio | http://localhost:5173       |
+| Admin     | http://localhost:5173/admin |
+| API       | http://localhost:5000/api   |
 
 ---
 
-## 🔑 Compte Admin
+🛠️ Stack technique
 
-| Champ | Valeur |
-|---|---|
-| Email | nzaubonheur84@gmail.com |
-| Mot de passe | *(défini lors du seed)* |
-
----
-
-## 🛠️ Stack technique
-
-| Couche | Technologies |
-|---|---|
-| **Frontend** | React 18, Vite, TailwindCSS, Framer Motion, i18next, React Hook Form |
-| **Backend** | Node.js, Express, TypeScript, JWT, Bcrypt, Zod, Resend |
-| **Base de données** | MySQL 8 + Prisma ORM v5 |
-| **Tooling** | ESLint, Nodemon, Concurrently |
+| Couche                     | Technologies                                                         |
+| -------------------------- | -------------------------------------------------------------------- |
+| **Frontend**         | React 18, Vite, TailwindCSS, Framer Motion, i18next, React Hook Form |
+| **Backend**          | Node.js, Express, TypeScript, JWT, Bcrypt, Zod, Resend               |
+| **Base de données** | MySQL 8 + Prisma ORM v5                                              |
+| **Tooling**          | ESLint, Nodemon, Concurrently                                        |
 
 ---
 
