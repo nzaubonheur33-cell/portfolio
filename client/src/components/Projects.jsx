@@ -55,7 +55,7 @@ function Projects() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* PROJECT 01: CampusGuide */}
-            <div className="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col group">
+            <div data-cursor="project" data-cursor-label="CampusGuide" className="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col group">
               <div className="w-full h-[220px] overflow-hidden">
                 <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80" alt="CampusGuide Preview" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
               </div>
@@ -105,7 +105,7 @@ function Projects() {
               </div>
             </div>
             {/* PROJECT 02: Portfolio */}
-            <div className="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col group">
+            <div data-cursor="project" data-cursor-label="Portfolio" className="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col group">
               <div className="w-full h-[220px] overflow-hidden">
                 <img src="https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?auto=format&fit=crop&w=800&q=80" alt="Portfolio Preview" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
               </div>
@@ -151,7 +151,7 @@ function Projects() {
               </div>
             </div>
             {/* PROJECT 03: Mikanda */}
-            <div className="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col group">
+            <div data-cursor="project" data-cursor-label="Mikanda" className="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col group">
               <div className="w-full h-[220px] overflow-hidden">
                 <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80" alt="Mikanda Preview" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
               </div>

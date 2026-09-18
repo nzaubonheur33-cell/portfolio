@@ -15,6 +15,8 @@ import Learning from './components/Learning';
 import Contact from './components/Contact';
 import Modals from './components/Modals';
 import Footer from './components/Footer';
+import CustomCursor from './components/ui/CustomCursor';
+import ScrollProgressBar from './components/ui/ScrollProgressBar';
 
 function App() {
   const { i18n } = useTranslation();
@@ -26,6 +28,8 @@ function App() {
 
   return (
     <>
+      <CustomCursor />
+      <ScrollProgressBar />
       <Navbar />
       <main className="w-full pt-8 bg-background min-h-[calc(100vh-280px)]">
         <div className="max-w-[1120px] mx-auto px-6 lg:px-8 py-10">

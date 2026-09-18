@@ -120,3 +120,12 @@
 ::-webkit-scrollbar {
   display: none;
 }
+
+/* === CURSEUR PERSONNALISÉ === */
+/* On masque le curseur natif uniquement sur les devices avec souris */
+@media (hover: hover) {
+  * {
+    cursor: none !important;
+  }
+}
+
