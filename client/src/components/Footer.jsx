@@ -26,7 +26,7 @@ function Footer() {
         <div className="flex flex-col lg:flex-row justify-between items-start gap-10 pb-12">
           <div className="space-y-3 max-w-md">
             <div className="flex items-center gap-2">
-              <img src="assets/logo.png" alt="Logo" className="h-12 w-12 object-contain" />
+              <img src="/logo.png" alt="Logo" className="h-12 w-12 object-contain" />
             </div>
             <p className="font-body-md text-body-md text-on-surface-variant font-medium">
               {t('footer.subtitle')}
