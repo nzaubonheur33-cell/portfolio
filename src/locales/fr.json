@@ -1,0 +1,360 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "Profil",
+    "skills": "Skills",
+    "services": "Services",
+    "projects": "Projets",
+    "experience": "Expérience",
+    "education": "Études",
+    "contact": "Contact",
+    "letsTalk": "Parlons"
+  },
+  "hero": {
+    "status": "Disponible pour nouvelles opportunités",
+    "greeting": "Bonjour, je suis",
+    "specialization": "Spécialisation IA @ Université Nouveaux Horizons",
+    "subtitle": "Étudiant en Informatique & Développeur Full-Stack",
+    "description": "Je transforme des problèmes concrets en solutions logicielles épurées, fiables et modernes. Passionné par l'Intelligence Artificielle, l'architecture backend, les protocoles réseau et l'écosystème Unix/Linux.",
+    "viewWork": "Voir mes Projets",
+    "downloadResume": "Télécharger le CV",
+    "letsTalk": "Discutons"
+  },
+  "stats": {
+    "stat1": { "label": "01 • ACADÉMIQUE", "title": "Étudiant IA & Info", "subtitle": "Université Nouveaux Horizons" },
+    "stat2": { "label": "02 • CODE", "title": "3+ Projets Majeurs", "subtitle": "CampusGuide, Mikanda, Portfolio" },
+    "stat3": { "label": "03 • SPÉCIALITÉ", "title": "Full-Stack + Systèmes", "subtitle": "React, Node, Python & Linux" },
+    "stat4": { "label": "04 • RÉSIDENCE", "title": "Lubumbashi, RDC", "subtitle": "Prêt pour du Remote Global" }
+  },
+  "about": {
+    "label": "Identité & Philosophie",
+    "title": "À Propos De Moi",
+    "subtitle": "Esprit curieux. Mentalité de bâtisseur. Apprenant perpétuel.",
+    "btnEn": "English Bio",
+    "btnFr": "Bio en Français",
+    "name": "Bonheur Nzau",
+    "role": "Developer • Thinker • Creator",
+    "bio1": "Je suis étudiant en Sciences Informatiques à l'<strong class=\"text-on-surface font-semibold\">Université Nouveaux Horizons</strong> à Lubumbashi, avec une spécialisation en <strong class=\"text-on-surface font-semibold\">Intelligence Artificielle</strong>. Mon travail unit des interfaces modernes à des architectures backend résilientes et sécurisées.",
+    "bio2": "Ma philosophie repose sur la création d'outils numériques concrets et accessibles qui profitent directement à nos communautés. De la conception de <span class=\"text-primary font-medium\">CampusGuide</span> pour simplifier la vie universitaire, au projet <span class=\"text-primary font-medium\">Mikanda</span> destiné à valoriser la littérature congolaise, chaque ligne de code répond à une utilité réelle.",
+    "bio3": "Au-delà du développement applicatif, j'explore avec rigueur les systèmes Linux, la conteneurisation, les réseaux informatiques (parcours Cisco CCNA) et l'intégration des modèles d'IA dans des produits de production.",
+    "traits": {
+      "problemSolver": "Résolution de Problèmes",
+      "problemSolverDesc": "Du complexe au fluide",
+      "alwaysLearning": "Apprentissage Continu",
+      "alwaysLearningDesc": "Veille quotidienne",
+      "detailOriented": "Souci du Détail",
+      "detailOrientedDesc": "Précision et clarté",
+      "teamPlayer": "Esprit d'Équipe",
+      "teamPlayerDesc": "Collaboration fluide",
+      "cleanCode": "Code Épuré",
+      "cleanCodeDesc": "Maintenable & testé",
+      "curiousMind": "Esprit Curieux",
+      "curiousMindDesc": "Linux, IA et réseaux"
+    }
+  },
+  "skills": {
+    "label": "Stack Technique",
+    "title": "Compétences & Technologies",
+    "subtitle": "Un écosystème axé sur des architectures modulaires, typées et performantes.",
+    "filter": {
+      "all": "Tout",
+      "frontend": "Frontend",
+      "backend": "Backend & APIs",
+      "database": "Bases de Données",
+      "systems": "DevOps & Systèmes",
+      "ai_tools": "IA & Outils"
+    }
+  },
+  "services": {
+    "label": "Capacités",
+    "title": "Services & Ce Que J'apporte",
+    "subtitle": "Allier sensibilité design et rigueur d'ingénierie.",
+    "items": {
+      "webDev": {
+        "title": "Développement Web",
+        "desc": "Création de sites et d'applications modernes, réactifs et ultra-rapides avec React, JavaScript et Tailwind CSS."
+      },
+      "fullStack": {
+        "title": "Ingénierie Full-Stack",
+        "desc": "Développement de bout en bout reliant interfaces soignées, backends Node/Express et bases de données relationnelles."
+      },
+      "api": {
+        "title": "APIs & Microservices",
+        "desc": "Conception et déploiement d'APIs REST sécurisées avec JWT, gestion des rôles et intégrations temps réel Socket.IO."
+      },
+      "saas": {
+        "title": "Produits Web & SaaS",
+        "desc": "Transformation de concepts en MVPs viables avec flux d'authentification soignés et architectures évolutives."
+      },
+      "edtech": {
+        "title": "EdTech & Plateformes Culturelles",
+        "desc": "Création de plateformes à fort impact pour la communauté estudiantine, les bibliothèques et la culture."
+      },
+      "linux": {
+        "title": "Linux & Administration Système",
+        "desc": "Configuration de serveurs, scripts Bash, proxies inverses Nginx, adressage réseau et déploiements cloud."
+      }
+    }
+  },
+  "projects": {
+    "label": "Projets Phares",
+    "title": "Projets Réalisés",
+    "subtitle": "Solutions numériques pensées avec rigueur et construites pour durer.",
+    "viewAll": "Voir sur GitHub",
+    "items": {
+      "campusGuide": {
+        "desc": "Plateforme universitaire conçue pour simplifier la vie étudiante en centralisant mentorat, clubs de campus, événements et notifications en temps réel.",
+        "caseStudy": "Voir l'Étude de Cas →",
+        "repo": "Code"
+      },
+      "portfolio": {
+        "desc": "Portfolio personnel éditorial conçu pour valoriser compétences techniques, démarche d'ingénierie, bilinguisme et typographie soignée.",
+        "status": "En Production",
+        "repo": "Code"
+      },
+      "mikanda": {
+        "desc": "Plateforme technologique et culturelle valorisant la littérature congolaise en facilitant l'accès aux livres et à la lecture pour la jeunesse.",
+        "status": "Tech Culturelle",
+        "repo": "Code"
+      }
+    },
+    "spotlight": {
+      "label": "Zoom Détaillé",
+      "title": "CampusGuide: Architecture & Exécution",
+      "explore": "Explorer le Code Source",
+      "problemTitle": "LE PROBLÈME",
+      "problemDesc": "La communication universitaire dispersée (WhatsApp, affichages, bouche-à-oreille) entraîne un manque d'organisation pour le mentorat, les clubs étudiants et les emplois du temps.",
+      "solutionTitle": "LA SOLUTION ARCHITECTURALE",
+      "solutionDesc": "Développement d'un frontend React connecté à un backend Node/Express. Base de données MySQL normalisée, authentification JWT stateless et WebSockets pour le temps réel.",
+      "outcomesTitle": "RÉSULTATS CLÉS",
+      "outcomesDesc": "Mise en place d'un matchmaking de mentorat, annuaire des clubs, notifications push et gestion des profils étudiants avec une UX mobile optimisée."
+    }
+  },
+  "experience": {
+    "label": "Parcours Professionnel",
+    "title": "Expérience Professionnelle",
+    "subtitle": "Expérience pratique au sein d'environnements d'entreprise et de gestion des ressources humaines.",
+    "items": {
+      "sodeico": {
+        "role": "Stagiaire • Opérations RH & Administratives",
+        "date": "04 Août – 07 Novembre",
+        "task1": "Assistance au recrutement et au traitement des dossiers candidats.",
+        "task2": "Classification des contrats et archivage documentaire.",
+        "task3": "Gestion bureautique avancée (Excel, Word et correspondances)."
+      }
+    }
+  },
+  "education": {
+    "label": "Formation Académique",
+    "title": "Études & Diplômes",
+    "subtitle": "Une solide formation scientifique, technologique et linguistique.",
+    "items": {
+      "unh": {
+        "status": "En Cours",
+        "date": "2025 – Présent",
+        "degree": "Bachelier en Sciences Informatiques",
+        "specialty": "Spécialisation : Intelligence Artificielle (IA)",
+        "school": "Université Nouveaux Horizons (UNH) • Lubumbashi, RDC",
+        "tags": "Algorithmique • Génie Logiciel • Base du Machine Learning"
+      },
+      "inpp": {
+        "status": "Terminé",
+        "date": "Fév 2025 – Juil 2025",
+        "degree": "Certificat Professionnel en Informatique",
+        "specialty": "Maîtrise de l'Outil Informatique",
+        "school": "Institut National de Préparation Professionnelle (INPP)",
+        "tags": "Bureautique • Productivité • Systèmes"
+      },
+      "nust": {
+        "status": "Diplômé",
+        "date": "2024 – 2025",
+        "degree": "Diplôme de Langue Anglaise",
+        "specialty": "Maîtrise Professionnelle et Académique",
+        "school": "National University of Science and Technology (NUST)",
+        "tags": "Rédaction Technique • Expression Orale • Anglais Pro"
+      },
+      "college": {
+        "status": "Diplôme d'État",
+        "date": "2022 – 2023",
+        "degree": "Diplôme d'État (Baccalauréat)",
+        "specialty": "Section Scientifique (Mathématiques & Physique)",
+        "school": "Collège Tutazamie",
+        "tags": "Mathématiques Avancées • Physique • Logique Analytique"
+      }
+    },
+    "certifications": {
+      "label": "Accréditations",
+      "title": "Certifications & Formations Techniques",
+      "networkTitle": "CompTIA Network+",
+      "networkDesc": "Architecture réseau, modèle OSI, adressage IP et principes de dépannage.",
+      "ciscoTitle": "Cisco CCNA (En Cours)",
+      "ciscoDesc": "Routage, commutation, VLANs, ACLs, adressage IP et sécurité.",
+      "inppTitle": "INPP Systèmes & Bureautique",
+      "inppDesc": "Certification d'État pour les outils informatiques administratifs et opérationnels."
+    }
+  },
+  "beyondCode": {
+    "label": "Sous le Capot",
+    "title": "Au-delà du Code",
+    "quote": "\"Je m'intéresse non seulement à la création d'interfaces, mais surtout à la compréhension des systèmes, réseaux et technologies qui font tourner ces produits.\"",
+    "items": {
+      "ai": {
+        "title": "IA & Réseaux de Neurones",
+        "desc": "Exploration du deep learning, des transformers, du prompt engineering et de leur application aux défis pratiques africains."
+      },
+      "linux": {
+        "title": "Systèmes Linux",
+        "desc": "À l'aise dans les terminaux Unix headless, l'automatisation Bash, la gestion de daemons via systemd et la planification cron."
+      },
+      "networking": {
+        "title": "Réseaux & Routage",
+        "desc": "Compréhension de la transmission de paquets, des sockets TCP/UDP, du DNS et des topologies de routage Cisco depuis les principes de base."
+      },
+      "architecture": {
+        "title": "Architecture Propre",
+        "desc": "Séparation des préoccupations, endpoints API idempotents, typage strict et modèles logiciels maintenables évoluant avec élégance."
+      }
+    }
+  },
+  "process": {
+    "label": "Méthodologie",
+    "title": "Mon Processus d'Ingénierie",
+    "subtitle": "Des principes de base à l'itération post-lancement continue.",
+    "items": {
+      "discover": {
+        "title": "Découvrir",
+        "desc": "Comprendre le problème et les vrais besoins des utilisateurs."
+      },
+      "plan": {
+        "title": "Planifier",
+        "desc": "Définir l'architecture, les fonctionnalités et l'approche technique."
+      },
+      "design": {
+        "title": "Concevoir",
+        "desc": "Créer des expériences utilisateur claires et intuitives."
+      },
+      "develop": {
+        "title": "Développer",
+        "desc": "Construire un logiciel propre, maintenable et évolutif."
+      },
+      "test": {
+        "title": "Tester",
+        "desc": "Valider la fonctionnalité, l'utilisabilité et la fiabilité."
+      },
+      "deploy": {
+        "title": "Déployer",
+        "desc": "Livrer le produit avec des outils de déploiement modernes."
+      },
+      "improve": {
+        "title": "Améliorer",
+        "desc": "Surveiller, apprendre et s'améliorer continuellement."
+      }
+    }
+  },
+  "learning": {
+    "label": "État d'Esprit",
+    "title": "Toujours Apprendre, Toujours Construire",
+    "quote": "\"Je crois que devenir un meilleur développeur est un processus continu. Chaque projet, défi et erreur est une occasion de s'améliorer.\"",
+    "focus": {
+      "title1": "FOCUS ACTUEL",
+      "desc1": "Grands Modèles de Langage (LLM) & IA",
+      "title2": "PLONGÉE SYSTÈMES",
+      "desc2": "Noyau Linux & Protocoles Réseaux",
+      "title3": "COMMUNAUTÉ",
+      "desc3": "Mentorat & Open Source en RDC"
+    },
+    "languages": {
+      "label": "Polyglotte",
+      "title": "Langues Parlées",
+      "subtitle": "Communication multilingue pour une collaboration mondiale.",
+      "items": {
+        "french": {
+          "name": "Français",
+          "level": "Natif / Courant"
+        },
+        "english": {
+          "name": "Anglais",
+          "level": "Professionnel (NUST)"
+        },
+        "lingala": {
+          "name": "Lingala",
+          "level": "Courant"
+        },
+        "swahili": {
+          "name": "Swahili",
+          "level": "Conversationnel"
+        }
+      }
+    }
+  },
+  "contact": {
+    "label": "Contactez-moi",
+    "title": "Construisons quelque chose",
+    "titleHighlight": "d'impactant ensemble.",
+    "subtitle": "Des idées aux interfaces réactives, APIs et produits digitaux complets — créons quelque chose d'utile et durable.",
+    "info": {
+      "emailLabel": "Email Direct",
+      "phoneLabel": "Téléphone Direct",
+      "locationLabel": "Localisation",
+      "locationValue": "Lubumbashi, République Démocratique du Congo",
+      "pipelineLabel": "PIPELINE DE CONTACT EN PRODUCTION",
+      "pipelineDesc": "Formulaire Visiteur → Validation Client → Handler Serverless Sécurisé → Contrôle Anti-Spam → Envoi direct à nzaubonheur84@gmail.com."
+    },
+    "form": {
+      "nameLabel": "Votre Nom *",
+      "namePlaceholder": "ex. Sarah Jenkins",
+      "emailLabel": "Adresse Email *",
+      "emailPlaceholder": "sarah@example.com",
+      "categoryLabel": "Catégorie de Projet",
+      "categoryOptions": {
+        "fullstack": "Application Web Full-Stack",
+        "frontend": "Interface Frontend React",
+        "backend": "API / Service Backend",
+        "ai": "IA / Machine Learning",
+        "edtech": "EdTech / Plateforme Culturelle",
+        "linux": "Consulting Systèmes Linux"
+      },
+      "subjectLabel": "Sujet",
+      "subjectPlaceholder": "Nouvelle demande de collaboration",
+      "messageLabel": "Votre Message *",
+      "messagePlaceholder": "Parlez-moi de vos objectifs, délais, ou questions...",
+      "submit": "Envoyer le Message"
+    }
+  },
+  "footer": {
+    "subtitle": "Étudiant en Sciences Informatiques & Développeur Full-Stack",
+    "location": "Lubumbashi, République Démocratique du Congo",
+    "desc": "Conçu avec curiosité, code et apprentissage continu.",
+    "lang": "FR",
+    "rights": "© 2026 Bonheur Nzau. Tous droits réservés.",
+    "links": {
+      "projects": "Projets Phares",
+      "contact": "Contactez-moi"
+    }
+  },
+  "modals": {
+    "caseStudy": {
+      "label": "ANALYSE DÉTAILLÉE",
+      "title": "CampusGuide • Architecture en Profondeur",
+      "subtitle": "Conçu pour l'écosystème étudiant de l'Université Nouveaux Horizons",
+      "highlightsTitle": "Points Clés de l'Architecture",
+      "highlights": [
+        "Front-end : Composants React modulaires stylisés avec Tailwind CSS.",
+        "Backend : Couche de routage Express.js avec contrôleurs et services.",
+        "Base de données : Schéma MySQL avec clés étrangères pour utilisateurs, clubs, événements.",
+        "Temps réel : WebSockets (Socket.IO) pour diffusions en direct et alertes instantanées."
+      ],
+      "challengesTitle": "Défis Techniques Relevés",
+      "challengesDesc": "Gestion de la synchronisation d'état lors de la planification des sessions de mentorat. Résolu via verrous transactionnels MySQL et mises à jour optimistes de l'UI.",
+      "repoTitle": "Dépôt & Code",
+      "close": "Fermer l'Étude de Cas"
+    },
+    "success": {
+      "title": "Message Envoyé !",
+      "desc1": "Merci de m'avoir contacté,",
+      "desc2": ". Votre message a été transmis à Bonheur Nzau à",
+      "desc3": ". Attendez-vous à une réponse très vite.",
+      "close": "Terminé"
+    }
+  }
+}
