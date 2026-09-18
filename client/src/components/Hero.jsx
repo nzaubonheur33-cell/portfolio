@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { AnimatedSection, StaggerContainer, StaggerItem } from './motion/AnimatedSection';
 
 function Hero() {
   const { t } = useTranslation();
@@ -8,37 +9,43 @@ function Hero() {
     <section className="relative py-12 lg:py-20" id="hero">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
         {/* Left Column: Copy & CTAs */}
-        <div className="lg:col-span-7 flex flex-col items-start space-y-6">
+        <StaggerContainer className="lg:col-span-7 flex flex-col items-start space-y-6">
           {/* Live Status & Greeting */}
-          <div className="flex flex-wrap items-center gap-3">
+          <StaggerItem className="flex flex-wrap items-center gap-3">
             <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container text-primary text-label-badge font-label-badge shadow-sm">
               <span>{t('hero.status')}</span>
             </span>
-          </div>
+          </StaggerItem>
           {/* Headline */}
           <div className="space-y-2">
-            <div className="inline-flex items-center gap-2">
+            <StaggerItem className="inline-flex items-center gap-2">
               <span className="text-headline-md font-headline-md text-on-surface-variant">
                 {t('hero.greeting')}
               </span>
               <span className="h-1 w-8 rounded-full bg-primary-container"></span>
-            </div>
-            <h1 className="font-display-hero text-display-hero tracking-tight text-on-surface">
-              Bonheur <span className="text-primary-container inline-block">Nzau</span>
-            </h1>
-            <p className="font-label-code text-label-code text-primary font-medium tracking-wide uppercase">
+            </StaggerItem>
+            <StaggerItem>
+              <h1 className="font-display-hero text-display-hero tracking-tight text-on-surface">
+                Bonheur <span className="text-primary-container inline-block">Nzau</span>
+              </h1>
+            </StaggerItem>
+            <StaggerItem className="font-label-code text-label-code text-primary font-medium tracking-wide uppercase">
               NZAU WUMA BONHEUR • <span>{t('hero.specialization')}</span>
-            </p>
+            </StaggerItem>
           </div>
           {/* Subtitle & Value statement */}
-          <p className="font-headline-sm text-headline-sm text-on-surface font-semibold max-w-xl">
-            {t('hero.subtitle')}
-          </p>
-          <p className="font-body-lg text-body-lg text-on-surface-variant max-w-xl leading-relaxed">
-            {t('hero.description')}
-          </p>
+          <StaggerItem>
+            <p className="font-headline-sm text-headline-sm text-on-surface font-semibold max-w-xl">
+              {t('hero.subtitle')}
+            </p>
+          </StaggerItem>
+          <StaggerItem>
+            <p className="font-body-lg text-body-lg text-on-surface-variant max-w-xl leading-relaxed">
+              {t('hero.description')}
+            </p>
+          </StaggerItem>
           {/* CTA Action Buttons */}
-          <div className="flex flex-wrap items-center gap-4 pt-2">
+          <StaggerItem className="flex flex-wrap items-center gap-4 pt-2">
             <a
               className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-primary-container text-on-primary font-headline-sm text-body-md shadow-md hover:bg-primary transition-all group"
               href="#projects"
@@ -63,16 +70,20 @@ function Hero() {
               <span>{t('hero.letsTalk')}</span>
               <span className="material-symbols-outlined text-[16px]">north_east</span>
             </a>
-          </div>
+          </StaggerItem>
           {/* Terminal-like mini indicator */}
-          <div className="pt-2 flex items-center gap-3 font-label-code text-label-code text-on-surface-variant bg-surface-container-low px-4 py-2 rounded-xl">
+          <StaggerItem className="pt-2 flex items-center gap-3 font-label-code text-label-code text-on-surface-variant bg-surface-container-low px-4 py-2 rounded-xl">
             <span className="text-primary font-semibold">$</span>
             <span>stack:</span>
             <span className="text-on-surface font-medium">React • Javascript • Python • Linux • Node.js • Github • Sql</span>
-          </div>
-        </div>
+          </StaggerItem>
+        </StaggerContainer>
         {/* Right Column: Editorial Line-Art Illustration */}
-        <div className="lg:col-span-5 flex justify-center relative">
+        <AnimatedSection 
+          direction="left" 
+          delay={0.2}
+          className="lg:col-span-5 flex justify-center relative"
+        >
           <div className="w-full max-w-[440px] bg-surface-container-lowest rounded-3xl p-6 shadow-md relative overflow-hidden">
             {/* Subtle warm backdrop circle */}
             <div className="absolute -top-12 -right-12 w-56 h-56 rounded-full bg-primary-fixed/40 blur-2xl pointer-events-none"></div>
@@ -139,7 +150,7 @@ function Hero() {
               <span className="w-2.5 h-2.5 rounded-full bg-primary-container"></span>
             </div>
           </div>
-        </div>
+        </AnimatedSection>
       </div>
     </section>
   );

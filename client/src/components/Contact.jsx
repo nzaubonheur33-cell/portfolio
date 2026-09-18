@@ -4,6 +4,8 @@ import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useTranslation } from 'react-i18next';
 import { submitContactForm } from '../services/contact.service';
+import { AnimatedSection, StaggerContainer, StaggerItem } from './motion/AnimatedSection';
+import { Spinner } from './ui/Loaders';
 
 const contactSchema = z.object({
   name: z.string().min(2, 'Le nom doit faire au moins 2 caractères'),
@@ -42,8 +44,8 @@ function Contact() {
 
   return (
     <section className="py-16" id="contact">
-      <div className="bg-surface-container-lowest rounded-3xl p-8 lg:p-12 shadow-sm space-y-12">
-        <div className="text-center max-w-2xl mx-auto space-y-3">
+      <AnimatedSection className="bg-surface-container-lowest rounded-3xl p-8 lg:p-12 shadow-sm space-y-12">
+        <StaggerContainer className="text-center max-w-2xl mx-auto space-y-3">
           <div className="inline-flex items-center gap-2">
             <span className="font-label-code text-label-code text-primary uppercase font-bold">
               {t('contact.label')}
@@ -56,7 +58,7 @@ function Contact() {
           <p className="font-body-lg text-body-lg text-on-surface-variant">
             {t('contact.subtitle')}
           </p>
-        </div>
+        </StaggerContainer>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
           {/* Left: Direct Metadata & Social Links */}
           <div className="lg:col-span-5 flex flex-col justify-between space-y-8">
@@ -250,7 +252,7 @@ function Contact() {
               >
                 {isSubmitting ? (
                   <>
-                    <span className="material-symbols-outlined text-[18px] animate-spin">progress_activity</span>
+                    <Spinner size="sm" className="text-on-primary border-r-transparent border-on-primary/30" />
                     <span>Envoi en cours...</span>
                   </>
                 ) : (
@@ -263,7 +265,7 @@ function Contact() {
             </form>
           </div>
         </div>
-      </div>
+      </AnimatedSection>
     </section>
   );
 }

@@ -1,9 +1,25 @@
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { getProjects } from '../services/projects.service';
+import { AnimatedSection, StaggerContainer, StaggerItem } from './motion/AnimatedSection';
+import { ProjectSkeleton } from './ui/Loaders';
 
 function Projects() {
   const { t } = useTranslation();
+  const [dynamicProjects, setDynamicProjects] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    getProjects()
+      .then((res) => {
+        setDynamicProjects(res.data || []);
+        setLoading(false);
+      })
+      .catch(() => {
+        setDynamicProjects([]);
+        setLoading(false);
+      });
+  }, []);
 
   const openModal = () => {
     window.dispatchEvent(new CustomEvent('openCaseStudy'));
@@ -11,7 +27,7 @@ function Projects() {
 
   return (
     <>
-      <section className="py-16" id="projects">
+      <AnimatedSection className="py-16" id="projects">
         <div className="space-y-10">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
             <div>
@@ -180,12 +196,71 @@ function Projects() {
                 </div>
               </div>
             </div>
+
+            {/* Projets dynamiques depuis le Dashboard Admin */}
+            {loading ? (
+              <>
+                <ProjectSkeleton />
+                <ProjectSkeleton />
+              </>
+            ) : (
+              dynamicProjects.map((project) => (
+                <div key={project.id} className="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col group">
+                  <div className="w-full h-[220px] overflow-hidden bg-surface-container flex items-center justify-center">
+                    {project.image ? (
+                      <img src={project.image} alt={project.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                    ) : (
+                      <span className="material-symbols-outlined text-5xl text-on-surface-variant/30">code</span>
+                    )}
+                  </div>
+                  <div className="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                      <div className="flex items-center justify-between">
+                        <h3 className="font-headline-md text-headline-sm text-on-surface font-bold">{project.title}</h3>
+                        {project.githubUrl && (
+                          <a aria-label={`${project.title} GitHub`} className="text-on-surface-variant hover:text-primary transition-colors" href={project.githubUrl} rel="noopener noreferrer" target="_blank">
+                            <span className="material-symbols-outlined text-[20px]">north_east</span>
+                          </a>
+                        )}
+                      </div>
+                      <p className="font-body-md text-body-md text-on-surface-variant mt-2 line-clamp-3">{project.description}</p>
+                    </div>
+                    <div className="pt-6">
+                      {project.technologies?.length > 0 && (
+                        <div className="flex flex-wrap items-center gap-1.5 font-label-code text-[11px] text-on-surface-variant">
+                          {project.technologies.map((tech, i) => (
+                            <React.Fragment key={tech.id}>
+                              <span>{tech.name}</span>
+                              {i < project.technologies.length - 1 && <span> • </span>}
+                            </React.Fragment>
+                          ))}
+                        </div>
+                      )}
+                      <div className="pt-4 flex items-center justify-end gap-2">
+                        {project.liveUrl && (
+                          <a className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-surface-container-low text-on-surface font-label-code text-[11px] hover:bg-surface-container transition-colors" href={project.liveUrl} rel="noopener noreferrer" target="_blank">
+                            <span className="material-symbols-outlined text-[14px]">open_in_new</span>
+                            <span>Live</span>
+                          </a>
+                        )}
+                        {project.githubUrl && (
+                          <a className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-surface-container-low text-on-surface font-label-code text-[11px] hover:bg-surface-container transition-colors" href={project.githubUrl} rel="noopener noreferrer" target="_blank">
+                            <span className="material-symbols-outlined text-[14px]">code</span>
+                            <span>Repo</span>
+                          </a>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))
+            )}
           </div>
         </div>
-      </section>
+      </AnimatedSection>
 
       {/* Spotlight Deep Dive */}
-      <section className="py-12">
+      <AnimatedSection className="py-12" direction="up" delay={0.2}>
         <div className="bg-surface-container-low rounded-3xl p-8 lg:p-10 shadow-sm space-y-8">
           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-6 border-b border-surface-container-high">
             <div>
@@ -280,7 +355,7 @@ function Projects() {
             </div>
           </div>
         </div>
-      </section>
+      </AnimatedSection>
     </>
   );
 }

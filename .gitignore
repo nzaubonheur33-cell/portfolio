@@ -38,3 +38,10 @@ Thumbs.db
 # Temporary files
 *.tmp
 *.log
+
+# AI & Editor specific folders
+.agents/
+.claude/
+.cursor/
+.devin/
+.vite/
