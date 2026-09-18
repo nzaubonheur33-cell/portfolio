@@ -1,0 +1,52 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Project {
+  id              Int                   @id @default(autoincrement())
+  title           String
+  slug            String                @unique
+  description     String                @db.Text
+  longDescription String?               @db.Text
+  image           String?
+  githubUrl       String?
+  liveUrl         String?
+  featured        Boolean               @default(false)
+  createdAt       DateTime              @default(now())
+  updatedAt       DateTime              @updatedAt
+  technologies    ProjectTechnology[]
+}
+
+model ProjectTechnology {
+  id        Int      @id @default(autoincrement())
+  projectId Int
+  name      String
+  project   Project  @relation(fields: [projectId], references: [id], onDelete: Cascade)
+}
+
+model ContactMessage {
+  id          Int      @id @default(autoincrement())
+  name        String
+  email       String
+  subject     String
+  projectType String
+  message     String   @db.Text
+  status      String   @default("UNREAD") // UNREAD, READ, REPLIED, ARCHIVED
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model AdminUser {
+  id           Int      @id @default(autoincrement())
+  name         String
+  email        String   @unique
+  passwordHash String
+  role         String   @default("ADMIN")
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}

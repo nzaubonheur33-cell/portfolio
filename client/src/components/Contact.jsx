@@ -1,24 +1,43 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useForm } from 'react-hook-form';
+import { z } from 'zod';
+import { zodResolver } from '@hookform/resolvers/zod';
 import { useTranslation } from 'react-i18next';
+import { submitContactForm } from '../services/contact.service';
+
+const contactSchema = z.object({
+  name: z.string().min(2, 'Le nom doit faire au moins 2 caractères'),
+  email: z.string().email('Adresse email invalide'),
+  projectType: z.string().min(1, 'Veuillez sélectionner un type de projet'),
+  subject: z.string().min(3, 'Le sujet doit faire au moins 3 caractères'),
+  message: z.string().min(10, 'Le message doit faire au moins 10 caractères'),
+});
 
 function Contact() {
   const { t } = useTranslation();
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    type: 'Full-Stack Web App',
-    subject: '',
-    message: ''
+  const [submitStatus, setSubmitStatus] = React.useState(null); // null | 'success' | 'error'
+
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors, isSubmitting },
+  } = useForm({
+    resolver: zodResolver(contactSchema),
+    defaultValues: {
+      projectType: 'Full-Stack Web App',
+    },
   });
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.id.replace('contact-', '')]: e.target.value });
-  };
-
-  const handleContactSubmit = (e) => {
-    e.preventDefault();
-    // Use window.dispatchEvent to notify Modals component
-    window.dispatchEvent(new CustomEvent('openSuccess', { detail: formData.name }));
+  const onSubmit = async (data) => {
+    setSubmitStatus(null);
+    try {
+      await submitContactForm(data);
+      setSubmitStatus('success');
+      reset();
+    } catch (err) {
+      setSubmitStatus('error');
+    }
   };
 
   return (
@@ -97,10 +116,33 @@ function Contact() {
               <p>{t('contact.info.pipelineDesc')}</p>
             </div>
           </div>
+
           {/* Right: Interactive Validated Contact Form */}
           <div className="lg:col-span-7 bg-surface-container-low p-6 sm:p-8 rounded-3xl">
-            <form className="space-y-4" id="contact-form" onSubmit={handleContactSubmit}>
+            {/* Success Message */}
+            {submitStatus === 'success' && (
+              <div className="mb-4 flex items-center gap-3 p-4 rounded-2xl bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800">
+                <span className="material-symbols-outlined text-green-600 dark:text-green-400 text-[20px]">check_circle</span>
+                <p className="text-green-700 dark:text-green-400 font-body-md text-body-md font-semibold">
+                  Message envoyé avec succès. Je vous répondrai rapidement !
+                </p>
+              </div>
+            )}
+
+            {/* Error Message */}
+            {submitStatus === 'error' && (
+              <div className="mb-4 flex items-center gap-3 p-4 rounded-2xl bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800">
+                <span className="material-symbols-outlined text-red-600 dark:text-red-400 text-[20px]">error</span>
+                <p className="text-red-700 dark:text-red-400 font-body-md text-body-md font-semibold">
+                  Une erreur est survenue. Veuillez réessayer.
+                </p>
+              </div>
+            )}
+
+            <form className="space-y-4" id="contact-form" onSubmit={handleSubmit(onSubmit)}>
+              {/* Honeypot anti-spam */}
               <input autoComplete="off" className="hidden" name="_gotcha" tabIndex="-1" type="text" />
+
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label
@@ -110,14 +152,15 @@ function Contact() {
                     {t('contact.form.nameLabel')}
                   </label>
                   <input
-                    className="w-full px-4 py-3 rounded-xl bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary shadow-sm placeholder:text-on-surface-variant/50"
+                    className={`w-full px-4 py-3 rounded-xl bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary shadow-sm placeholder:text-on-surface-variant/50 ${errors.name ? 'ring-2 ring-red-500' : ''}`}
                     id="contact-name"
                     placeholder={t('contact.form.namePlaceholder')}
-                    required
                     type="text"
-                    value={formData.name}
-                    onChange={handleChange}
+                    {...register('name')}
                   />
+                  {errors.name && (
+                    <p className="mt-1 text-xs text-red-500">{errors.name.message}</p>
+                  )}
                 </div>
                 <div>
                   <label
@@ -127,16 +170,18 @@ function Contact() {
                     {t('contact.form.emailLabel')}
                   </label>
                   <input
-                    className="w-full px-4 py-3 rounded-xl bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary shadow-sm placeholder:text-on-surface-variant/50"
+                    className={`w-full px-4 py-3 rounded-xl bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary shadow-sm placeholder:text-on-surface-variant/50 ${errors.email ? 'ring-2 ring-red-500' : ''}`}
                     id="contact-email"
                     placeholder={t('contact.form.emailPlaceholder')}
-                    required
                     type="email"
-                    value={formData.email}
-                    onChange={handleChange}
+                    {...register('email')}
                   />
+                  {errors.email && (
+                    <p className="mt-1 text-xs text-red-500">{errors.email.message}</p>
+                  )}
                 </div>
               </div>
+
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label
@@ -148,8 +193,7 @@ function Contact() {
                   <select
                     className="w-full px-4 py-3 rounded-xl bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary shadow-sm"
                     id="contact-type"
-                    value={formData.type}
-                    onChange={handleChange}
+                    {...register('projectType')}
                   >
                     <option value="Full-Stack Web App">{t('contact.form.categoryOptions.fullstack')}</option>
                     <option value="React Frontend UI">{t('contact.form.categoryOptions.frontend')}</option>
@@ -167,15 +211,18 @@ function Contact() {
                     {t('contact.form.subjectLabel')}
                   </label>
                   <input
-                    className="w-full px-4 py-3 rounded-xl bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary shadow-sm placeholder:text-on-surface-variant/50"
+                    className={`w-full px-4 py-3 rounded-xl bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary shadow-sm placeholder:text-on-surface-variant/50 ${errors.subject ? 'ring-2 ring-red-500' : ''}`}
                     id="contact-subject"
                     placeholder={t('contact.form.subjectPlaceholder')}
                     type="text"
-                    value={formData.subject}
-                    onChange={handleChange}
+                    {...register('subject')}
                   />
+                  {errors.subject && (
+                    <p className="mt-1 text-xs text-red-500">{errors.subject.message}</p>
+                  )}
                 </div>
               </div>
+
               <div>
                 <label
                   className="block font-label-badge text-label-badge text-on-surface font-semibold mb-1"
@@ -184,22 +231,34 @@ function Contact() {
                   {t('contact.form.messageLabel')}
                 </label>
                 <textarea
-                  className="w-full px-4 py-3 rounded-xl bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary shadow-sm placeholder:text-on-surface-variant/50"
+                  className={`w-full px-4 py-3 rounded-xl bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary shadow-sm placeholder:text-on-surface-variant/50 ${errors.message ? 'ring-2 ring-red-500' : ''}`}
                   id="contact-message"
                   placeholder={t('contact.form.messagePlaceholder')}
-                  required
                   rows="4"
-                  value={formData.message}
-                  onChange={handleChange}
-                ></textarea>
+                  {...register('message')}
+                />
+                {errors.message && (
+                  <p className="mt-1 text-xs text-red-500">{errors.message.message}</p>
+                )}
               </div>
+
               <button
-                className="w-full py-3.5 px-6 rounded-xl bg-primary-container text-on-primary font-headline-sm text-body-md hover:bg-primary transition-all shadow-md flex items-center justify-center gap-2"
+                className="w-full py-3.5 px-6 rounded-xl bg-primary-container text-on-primary font-headline-sm text-body-md hover:bg-primary transition-all shadow-md flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed"
                 id="submit-btn"
                 type="submit"
+                disabled={isSubmitting}
               >
-                <span>{t('contact.form.submit')}</span>
-                <span className="material-symbols-outlined text-[18px]">send</span>
+                {isSubmitting ? (
+                  <>
+                    <span className="material-symbols-outlined text-[18px] animate-spin">progress_activity</span>
+                    <span>Envoi en cours...</span>
+                  </>
+                ) : (
+                  <>
+                    <span>{t('contact.form.submit')}</span>
+                    <span className="material-symbols-outlined text-[18px]">send</span>
+                  </>
+                )}
               </button>
             </form>
           </div>
