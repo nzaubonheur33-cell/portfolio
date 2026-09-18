@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { getProjects } from '../services/projects.service';
 
 function Projects() {
   const { t } = useTranslation();
