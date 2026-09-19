@@ -7,28 +7,34 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+// ============================================================
+// PROJECTS
+// ============================================================
 model Project {
-  id              Int                   @id @default(autoincrement())
+  id              Int                 @id @default(autoincrement())
   title           String
-  slug            String                @unique
-  description     String                @db.Text
-  longDescription String?               @db.Text
+  slug            String              @unique
+  description     String              @db.Text
+  longDescription String?             @db.Text
   image           String?
   githubUrl       String?
   liveUrl         String?
-  featured        Boolean               @default(false)
-  createdAt       DateTime              @default(now())
-  updatedAt       DateTime              @updatedAt
+  featured        Boolean             @default(false)
+  createdAt       DateTime            @default(now())
+  updatedAt       DateTime            @updatedAt
   technologies    ProjectTechnology[]
 }
 
 model ProjectTechnology {
-  id        Int      @id @default(autoincrement())
+  id        Int     @id @default(autoincrement())
   projectId Int
   name      String
-  project   Project  @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  project   Project @relation(fields: [projectId], references: [id], onDelete: Cascade)
 }
 
+// ============================================================
+// CONTACT
+// ============================================================
 model ContactMessage {
   id          Int      @id @default(autoincrement())
   name        String
@@ -41,6 +47,9 @@ model ContactMessage {
   updatedAt   DateTime @updatedAt
 }
 
+// ============================================================
+// ADMIN
+// ============================================================
 model AdminUser {
   id           Int      @id @default(autoincrement())
   name         String
@@ -49,4 +58,70 @@ model AdminUser {
   role         String   @default("ADMIN")
   createdAt    DateTime @default(now())
   updatedAt    DateTime @updatedAt
+}
+
+// ============================================================
+// SKILLS (Gestion dynamique des compétences)
+// ============================================================
+model Skill {
+  id        Int      @id @default(autoincrement())
+  category  String   // ex: "Frontend", "Backend", "Database", "DevOps"
+  name      String
+  level     Int      @default(80) // 0 - 100 (pourcentage de maîtrise)
+  icon      String?  // Nom de l'icône Material Symbols ou emoji
+  order     Int      @default(0) // Ordre d'affichage
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// ============================================================
+// EXPERIENCE (Parcours professionnel dynamique)
+// ============================================================
+model Experience {
+  id          Int      @id @default(autoincrement())
+  title       String   // ex: "Développeur Full-Stack"
+  company     String   // ex: "Freelance"
+  location    String?  // ex: "Kinshasa, RDC"
+  startDate   DateTime
+  endDate     DateTime? // null = poste actuel
+  current     Boolean  @default(false)
+  description String   @db.Text
+  order       Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+// ============================================================
+// EDUCATION (Formation académique dynamique)
+// ============================================================
+model Education {
+  id          Int      @id @default(autoincrement())
+  degree      String   // ex: "Bachelor en Informatique"
+  school      String   // ex: "Université de Kinshasa"
+  location    String?
+  startDate   DateTime
+  endDate     DateTime?
+  current     Boolean  @default(false)
+  description String?  @db.Text
+  order       Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+// ============================================================
+// ARTICLES (Blog technique)
+// ============================================================
+model Article {
+  id          Int      @id @default(autoincrement())
+  title       String
+  slug        String   @unique
+  excerpt     String   @db.Text  // Résumé court
+  content     String   @db.LongText // Contenu Markdown complet
+  coverImage  String?
+  published   Boolean  @default(false)
+  publishedAt DateTime?
+  readTime    Int      @default(5) // Minutes de lecture estimées
+  tags        String?  // JSON array string ex: '["React","Node.js"]'
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
 }

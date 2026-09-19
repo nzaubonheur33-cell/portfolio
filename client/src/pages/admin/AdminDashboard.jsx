@@ -3,6 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import { logoutAdmin } from '../../services/auth.service';
 import { getMessages, updateMessageStatus, deleteMessage } from '../../services/contact.service';
 import { getProjects, createProject, deleteProject } from '../../services/projects.service';
+import ArticlesTab from '../../components/admin/ArticlesTab';
+import SkillsTab from '../../components/admin/SkillsTab';
+import ExperiencesTab from '../../components/admin/ExperiencesTab';
 
 const STATUS_LABELS = {
   UNREAD: { label: 'Non lu', color: 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300' },
@@ -155,14 +158,14 @@ function AdminDashboard() {
         </div>
 
         {/* Tabs */}
-        <div className="flex gap-1 mb-6 bg-surface-container-low rounded-2xl p-1 w-fit">
-          {['messages', 'projects'].map((tab) => (
+        <div className="flex gap-1 mb-6 bg-surface-container-low rounded-2xl p-1 w-fit overflow-x-auto">
+          {['messages', 'projects', 'articles', 'skills', 'experiences'].map((tab) => (
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
-              className={`px-5 py-2 rounded-xl text-sm font-semibold transition-all ${activeTab === tab ? 'bg-surface-container-lowest text-on-surface shadow-sm' : 'text-on-surface-variant hover:text-on-surface'}`}
+              className={`px-5 py-2 rounded-xl text-sm font-semibold transition-all whitespace-nowrap ${activeTab === tab ? 'bg-surface-container-lowest text-on-surface shadow-sm' : 'text-on-surface-variant hover:text-on-surface'}`}
             >
-              {tab === 'messages' ? `Messages ${unreadCount > 0 ? `(${unreadCount})` : ''}` : 'Projets'}
+              {tab === 'messages' ? `Messages ${unreadCount > 0 ? `(${unreadCount})` : ''}` : tab.charAt(0).toUpperCase() + tab.slice(1)}
             </button>
           ))}
         </div>
@@ -412,6 +415,15 @@ function AdminDashboard() {
             )}
           </div>
         )}
+
+        {/* Articles Tab */}
+        {activeTab === 'articles' && <ArticlesTab />}
+        
+        {/* Skills Tab */}
+        {activeTab === 'skills' && <SkillsTab />}
+        
+        {/* Experiences Tab */}
+        {activeTab === 'experiences' && <ExperiencesTab />}
       </div>
     </div>
   );

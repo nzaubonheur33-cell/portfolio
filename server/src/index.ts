@@ -9,6 +9,9 @@ import { errorHandler } from './middlewares/error.middleware';
 import projectRoutes from './routes/projects.routes';
 import contactRoutes from './routes/contact.routes';
 import authRoutes from './routes/auth.routes';
+import skillsRoutes from './routes/skills.routes';
+import experiencesRoutes from './routes/experiences.routes';
+import articlesRoutes from './routes/articles.routes';
 
 dotenv.config({ path: path.resolve(__dirname, '../../.env') });
 
@@ -30,6 +33,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/api/projects', projectRoutes);
 app.use('/api/contact', contactRoutes);
 app.use('/api/auth', authRoutes);
+app.use('/api/skills', skillsRoutes);
+app.use('/api/experiences', experiencesRoutes);
+app.use('/api/articles', articlesRoutes);
 
 // Health check route
 app.get('/api', (req, res) => {
